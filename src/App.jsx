@@ -10,7 +10,7 @@ import tripadvisor from "./assets/img/tripadvisor.png";
 import Footer from "./components/Footer/Footer";
 import EmojiS from "./assets/img/emojiS.png";
 import "./components/Footer/Footer.css";
-import Fullstack from "./pages/Fullstack/Fullstack";
+import Fullstack from "./pages/fullstack/Fullstack";
 import Frontend from "./pages/frontend/Frontend";
 import Backend from "./pages/Backend/Backend";
 import Home from "./pages/Home/Home";

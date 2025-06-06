@@ -12,9 +12,9 @@ const Fullstack = ({ projectsTab }) => {
             if (project.type === "fullstack") {
               return (
                 <Project
-                  key={index}
                   project={project}
                   projectsTab={projectsTab}
+                  key={index}
                 />
               );
             }
