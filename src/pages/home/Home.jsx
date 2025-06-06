@@ -40,9 +40,9 @@ const Home = ({ langageTab }) => {
         <section className="languages-techno-box">
           <h2>Languages et technologies </h2>
           <div className="languages-box">
-            {langageTab.map((langageElement) => {
+            {langageTab.map((langageElement, index) => {
               return (
-                <div className="language-box">
+                <div key={index} className="language-box">
                   <div className="language-logo-box">
                     <img src={langageElement.logo} alt="" />
                   </div>

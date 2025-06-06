@@ -8,9 +8,15 @@ const Fullstack = ({ projectsTab }) => {
         <h2>Projets Fullstack</h2>
         <p>Cliquez sur l'image pour accéder directement au projet</p>
         <section className="fullstack-project-box">
-          {projectsTab.map((project) => {
+          {projectsTab.map((project, index) => {
             if (project.type === "fullstack") {
-              return <Project project={project} projectsTab={projectsTab} />;
+              return (
+                <Project
+                  key={index}
+                  project={project}
+                  projectsTab={projectsTab}
+                />
+              );
             }
           })}
         </section>
