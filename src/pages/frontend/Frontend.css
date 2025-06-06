@@ -1,0 +1,29 @@
+.frontend {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+  background-color: rgb(240, 239, 239);
+  margin-bottom: 140px;
+}
+
+.frontend > h2 {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+.frontend > p {
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
+  margin: 0 0 30px;
+}
+.frontend-project-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

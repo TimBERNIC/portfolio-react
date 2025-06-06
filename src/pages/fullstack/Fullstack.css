@@ -1,0 +1,26 @@
+.fullstack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(240, 239, 239);
+  margin-top: 70px;
+  margin-bottom: 140px;
+}
+.fullstack > h2 {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 30px;
+}
+.fullstack > p {
+  font-style: italic;
+  font-size: 12px;
+  margin: 0 0 30px;
+}
+.fullstack-project-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

@@ -1,0 +1,71 @@
+.global-contact-box {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+  background-color: rgb(240, 239, 239);
+}
+.global-contact-box p {
+  text-align: center;
+}
+.contact-description {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 10px 0 50px;
+}
+.contact-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+}
+.global-contact-box > h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.contact-box > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.global-contact-box a {
+  color: black;
+  text-decoration: none;
+}
+
+.global-contact-box a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.contact-logo-box {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-logo-box > img {
+  width: 100%;
+}
+
+.cv-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cv-box > a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 800px) {
+  p {
+    text-align: center;
+  }
+}
