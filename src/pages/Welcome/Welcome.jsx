@@ -18,7 +18,7 @@ const Welcome = () => {
   return (
     <Link to="/home" className="welcome-global-div">
       <h1 className={textClass}>
-        Bienvenue le Portfolio de Timothée Béraudy-Nicolet
+        Bienvenue sur le Portfolio de Timothée Béraudy-Nicolet
       </h1>
     </Link>
   );
