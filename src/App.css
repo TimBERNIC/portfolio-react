@@ -66,7 +66,7 @@ body {
   position: fixed;
   top: -100vh;
   right: 0;
-  transition: all 1.2s ease-out;
+  transition: all 2s ease-out;
   background-color: rgb(0, 0, 0);
 }
 
@@ -181,10 +181,6 @@ h3 {
     justify-content: center;
     align-items: center;
     position: fixed;
-  }
-
-  .change {
-    gap: 0;
   }
 
   .rotate-right {

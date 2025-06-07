@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 import "../Welcome/Welcome.css";
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 const Welcome = () => {
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState("white");
+  const navigate = useNavigate();
+  setTimeout(() => {
+    setColor("black");
+  }, 1000);
 
   setTimeout(() => {
-    setColor("white");
-  }, 1000);
+    navigate("/home");
+  }, 5000);
 
   const textClass = `text-contain ${color}`;
 
   return (
     <Link to="/home" className="welcome-global-div">
-      <div className={textClass}>
-        Bienvenue le site Portfolio de Timothée Béraudy-Nicolet
-      </div>
+      <h1 className={textClass}>
+        Bienvenue le Portfolio de Timothée Béraudy-Nicolet
+      </h1>
     </Link>
   );
 };

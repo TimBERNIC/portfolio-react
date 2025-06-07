@@ -1,34 +1,19 @@
-.home-page-transition {
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  position: absolute;
-  z-index: 2001;
-}
-.global-home-page {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  /* background-color: rgba(255, 255, 255, 0); */
-  z-index: 2050;
-  transition: 2s;
-}
-.static {
-  z-index: 0;
-}
 .home-page {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  transition: 4s;
-  opacity: 0;
+  transition: 3s;
+
   margin-top: 70px;
   gap: 20px;
   margin-bottom: 140px;
+  opacity: 0;
 }
-
+.visible {
+  opacity: 1;
+}
 .homeVisible {
   opacity: 1;
 }

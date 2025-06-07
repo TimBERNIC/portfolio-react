@@ -24,117 +24,117 @@ import Contact from "./pages/contact/Contact";
 import favicon from "./assets/img/favicon.png";
 import { useState } from "react";
 import Welcome from "./pages/Welcome/Welcome.jsx";
+const langageTab = [
+  {
+    name: "HTML5",
+    logo: htmlLogo,
+  },
+  {
+    name: "CSS",
+    logo: CSSlogo,
+  },
+  {
+    name: "JavaScript",
+    logo: JSlogo,
+  },
+  {
+    name: "ReactJS",
+    logo: reactlogo,
+  },
+  {
+    name: "ReactNative",
+    logo: reactNativeLogo,
+  },
+  {
+    name: "NodeJS",
+    logo: nodeJs,
+  },
+  {
+    name: "",
+    logo: express,
+  },
+  {
+    name: "",
+    logo: mongoDB,
+  },
+];
+
+const projectsTab = [
+  {
+    type: "fullstack",
+    title: "Deliver",
+    techno: "React/NodeJS/Express",
+    subtitle: "Replique du célèbre site de vente de nourriture",
+    img: deliverooImg,
+    description:
+      "Projet full-stack, avec un frontend monté en react et backend nodeJs/ express. Une version de rappel API vers l'API de Deliver est aussi disponible sur le github mais instable car la clé API doit être régulièrement renouvelée. Un base de donnée fictive à donc été montée en dur sur l'API utilisée. Gestion d'un panier de vente intégré.",
+    url: "https://deliveroos-copy.netlify.app/",
+  },
+  {
+    type: "fullstack",
+    title: "TedVin (en cours de développement)",
+    techno: "React/NodeJS/Express/MongoDB",
+    subtitle:
+      "Replique complète (en cours) du célèbre site de vente de vêtements",
+    img: TedVin,
+    description:
+      "Projet full-stack, avec un frontend monté en react et backend nodeJs/ express. Gestion d'un page Login et Signup avec requêtes et post vers l'API et Base de données MongoDB. Gestion du retour de token en cookie. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification.",
+    url: "https://tedvin-frontend-bytbn.netlify.app/",
+  },
+  {
+    type: "frontend",
+    techno: "React",
+    title: "FletNix",
+    subtitle:
+      "Replique frontend d'une page du célèbre site de streaming de video",
+    img: fletnixImg,
+    description:
+      "Projet frontend en react, avec mise en place de carousselles, gestion de style et de responsive",
+    url: "https://fletnix-reproduction.netlify.app/",
+  },
+  {
+    type: "frontend",
+    techno: "Javascript/HTMLM/CSS",
+    title: "TripAd",
+    subtitle: "Replique frontend d'une page du célèbre site de voyage",
+    img: tripadvisor,
+    description:
+      "Projet frontend en JS, HTML/CSS avec mise en place de carousselles, gestion de style et de responsive",
+    url: "https://tripadvisor-copy-bytbn.netlify.app/",
+  },
+  {
+    type: "frontend",
+    techno: "React",
+    title: "EmojiSearch",
+    subtitle: "Application de tri et recherche d'Emojis (non responsive)",
+    img: EmojiS,
+    description:
+      "Cours projet de filtre et de tri d'Emojis par mots-clés à partir d'un recueil de données Json",
+    url: "https://emojisearch-bytbn.netlify.app/",
+  },
+];
+
+const linkTab = [
+  {
+    name: "Github",
+    logo: githubLogo,
+    url: "https://github.com/TimBERNIC",
+  },
+  {
+    name: "Linkedin",
+    logo: linkedinLogo,
+    url: "https://www.linkedin.com/in/timothée-nicolet-8b04a8329",
+  },
+];
 
 const App = () => {
-  const langageTab = [
-    {
-      name: "HTML5",
-      logo: htmlLogo,
-    },
-    {
-      name: "CSS",
-      logo: CSSlogo,
-    },
-    {
-      name: "JavaScript",
-      logo: JSlogo,
-    },
-    {
-      name: "ReactJS",
-      logo: reactlogo,
-    },
-    {
-      name: "ReactNative",
-      logo: reactNativeLogo,
-    },
-    {
-      name: "NodeJS",
-      logo: nodeJs,
-    },
-    {
-      name: "",
-      logo: express,
-    },
-    {
-      name: "",
-      logo: mongoDB,
-    },
-  ];
-
-  const projectsTab = [
-    {
-      type: "fullstack",
-      title: "Deliver",
-      techno: "React/NodeJS/Express",
-      subtitle: "Replique du célèbre site de vente de nourriture",
-      img: deliverooImg,
-      description:
-        "Projet full-stack, avec un frontend monté en react et backend nodeJs/ express. Une version de rappel API vers l'API de Deliver est aussi disponible sur le github mais instable car la clé API doit être régulièrement renouvelée. Un base de donnée fictive à donc été montée en dur sur l'API utilisée. Gestion d'un panier de vente intégré.",
-      url: "https://deliveroos-copy.netlify.app/",
-    },
-    {
-      type: "fullstack",
-      title: "TedVin (en cours de développement)",
-      techno: "React/NodeJS/Express/MongoDB",
-      subtitle:
-        "Replique complète (en cours) du célèbre site de vente de vêtements",
-      img: TedVin,
-      description:
-        "Projet full-stack, avec un frontend monté en react et backend nodeJs/ express. Gestion d'un page Login et Signup avec requêtes et post vers l'API et Base de données MongoDB. Gestion du retour de token en cookie. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification.",
-      url: "https://tedvin-frontend-bytbn.netlify.app/",
-    },
-    {
-      type: "frontend",
-      techno: "React",
-      title: "FletNix",
-      subtitle:
-        "Replique frontend d'une page du célèbre site de streaming de video",
-      img: fletnixImg,
-      description:
-        "Projet frontend en react, avec mise en place de carousselles, gestion de style et de responsive",
-      url: "https://fletnix-reproduction.netlify.app/",
-    },
-    {
-      type: "frontend",
-      techno: "Javascript/HTMLM/CSS",
-      title: "TripAd",
-      subtitle: "Replique frontend d'une page du célèbre site de voyage",
-      img: tripadvisor,
-      description:
-        "Projet frontend en JS, HTML/CSS avec mise en place de carousselles, gestion de style et de responsive",
-      url: "https://tripadvisor-copy-bytbn.netlify.app/",
-    },
-    {
-      type: "frontend",
-      techno: "React",
-      title: "EmojiSearch",
-      subtitle: "Application de tri et recherche d'Emojis (non responsive)",
-      img: EmojiS,
-      description:
-        "Cours projet de filtre et de tri d'Emojis par mots-clés à partir d'un recueil de données Json",
-      url: "https://emojisearch-bytbn.netlify.app/",
-    },
-  ];
-
-  const linkTab = [
-    {
-      name: "Github",
-      logo: githubLogo,
-      url: "https://github.com/TimBERNIC",
-    },
-    {
-      name: "Linkedin",
-      logo: linkedinLogo,
-      url: "https://www.linkedin.com/in/timothée-nicolet-8b04a8329",
-    },
-  ];
-
   const [burgerVisible, setBurgerVisible] = useState(false);
+
   return (
     <>
       <main>
         <Router>
-          <header className="router-nav change">
+          <header className="router-nav">
             <Link to="/home" className="nav-title">
               <div>
                 <img src={favicon} alt="" />
@@ -142,9 +142,7 @@ const App = () => {
               <p>Portfolio</p>
             </Link>
             <div
-              className={
-                burgerVisible ? "burger-button change" : "burger-button "
-              }
+              className={"burger-button"}
               onClick={() => {
                 setBurgerVisible(!burgerVisible);
               }}>
@@ -160,16 +158,36 @@ const App = () => {
               className={
                 burgerVisible ? "router-link-nav visible" : "router-link-nav"
               }>
-              <Link className="router-button" to="/home">
+              <Link
+                className="router-button"
+                to="/home"
+                onClick={() => {
+                  setBurgerVisible(false);
+                }}>
                 Accueil
               </Link>
-              <Link className="router-button" to="/fullstack">
+              <Link
+                className="router-button"
+                to="/fullstack"
+                onClick={() => {
+                  setBurgerVisible(false);
+                }}>
                 Projets Fullstack
               </Link>
-              <Link className="router-button" to="/frontend">
+              <Link
+                className="router-button"
+                to="/frontend"
+                onClick={() => {
+                  setBurgerVisible(false);
+                }}>
                 Projets Frontend
               </Link>
-              <Link className="router-button" to="/contact">
+              <Link
+                className="router-button"
+                to="/contact"
+                onClick={() => {
+                  setBurgerVisible(false);
+                }}>
                 Contact
               </Link>
             </div>
