@@ -11,7 +11,7 @@ const Welcome = () => {
 
   setTimeout(() => {
     navigate("/home");
-  }, 5000);
+  }, 4000);
 
   const textClass = `text-contain ${color}`;
 

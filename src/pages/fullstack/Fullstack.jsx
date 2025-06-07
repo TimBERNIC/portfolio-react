@@ -7,7 +7,7 @@ const Fullstack = ({ projectsTab }) => {
     const transition = async () => {
       setTimeout(() => {
         setIsVisible(true);
-      }, 1000);
+      }, 500);
     };
 
     transition();

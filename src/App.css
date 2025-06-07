@@ -2,9 +2,7 @@
 
 body {
   font-family: "Exo", sans-serif;
-  background-image: url("./assets/img/Fond.jpg");
-  background-size: cover;
-  z-index: -2;
+  background-color: rgb(222, 220, 220);
 }
 
 .container {
@@ -19,6 +17,7 @@ body {
 .router-nav {
   display: flex;
   background-color: rgb(0, 0, 0);
+  box-shadow: 4px 18px 50px -10px #000000;
   width: 100%;
   top: 0px;
   z-index: 100;
@@ -48,7 +47,7 @@ body {
 }
 .nav-title > p:hover {
   color: #fe1efea5;
-  transition: 2s;
+  transition: 0.5s;
 }
 .nav-title > div > img {
   width: 100%;
@@ -102,7 +101,7 @@ h3 {
   cursor: pointer;
   background-color: rgb(158, 158, 158);
   color: black;
-  transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .presentation-box {
@@ -133,7 +132,7 @@ h3 {
   height: 3px;
   background-color: white;
   position: absolute;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 .bottom {
   bottom: 14px;
@@ -145,18 +144,18 @@ h3 {
 .rotate-right {
   top: calc(47%);
   transform: rotate(45deg);
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .rotate-left {
   bottom: calc(46%);
   transform: rotate(-45deg);
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .disable {
   display: none;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .burger-button:hover {
@@ -164,7 +163,7 @@ h3 {
 }
 
 .visible {
-  transition: all 1.2s ease-out;
+  transition: all 1s ease-out;
   top: 50px;
 }
 
@@ -186,18 +185,18 @@ h3 {
   .rotate-right {
     top: calc(47%);
     transform: rotate(45deg);
-    transition: 0.7s;
+    transition: 0.5s;
   }
 
   .rotate-left {
     bottom: calc(46%);
     transform: rotate(-45deg);
-    transition: 0.7s;
+    transition: 0.5s;
   }
 
   .disable {
     display: none;
-    transition: 0.7s;
+    transition: 0.5s;
   }
 
   .burger-button:hover {
@@ -215,11 +214,11 @@ h3 {
 
     position: fixed;
     top: -100vh;
-    transition: all 1.2s ease-out;
+    transition: all 1s ease-out;
   }
 
   .visible {
-    transition: all 1.2s ease-out;
+    transition: all 1s ease-out;
     top: 50px;
   }
 

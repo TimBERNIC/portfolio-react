@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  transition: 3s;
+  transition: 2s;
 
   margin-top: 70px;
   gap: 20px;
@@ -59,7 +59,7 @@
   color: grey;
 }
 .link:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 .languages-techno-box {
   display: flex;
