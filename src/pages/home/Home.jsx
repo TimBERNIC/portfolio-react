@@ -14,7 +14,7 @@ const Home = ({ langageTab }) => {
 
       setTimeout(() => {
         setHomeVisible(true);
-      }, 2000);
+      }, 1500);
     };
 
     transition();

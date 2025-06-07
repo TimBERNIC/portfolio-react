@@ -80,7 +80,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   min-width: 200px;
-  border-radius: 5px;
+
   z-index: 0;
 }
 
@@ -133,7 +133,7 @@ h3 {
   height: 3px;
   background-color: white;
   position: absolute;
-  transition: 1s;
+  transition: 0.7s;
 }
 .bottom {
   bottom: 14px;
@@ -169,7 +169,6 @@ h3 {
 }
 
 .router-button:last-child {
-  border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
@@ -191,18 +190,18 @@ h3 {
   .rotate-right {
     top: calc(47%);
     transform: rotate(45deg);
-    transition: 2s;
+    transition: 0.7s;
   }
 
   .rotate-left {
     bottom: calc(46%);
     transform: rotate(-45deg);
-    transition: 2s;
+    transition: 0.7s;
   }
 
   .disable {
     display: none;
-    transition: 2s;
+    transition: 0.7s;
   }
 
   .burger-button:hover {

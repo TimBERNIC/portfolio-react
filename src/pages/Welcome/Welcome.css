@@ -32,3 +32,11 @@
   color: rgba(35, 186, 228, 0.815);
   transition: 1s;
 }
+
+@media (max-width: 800px) {
+  .text-contain {
+    padding: 0 50px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
