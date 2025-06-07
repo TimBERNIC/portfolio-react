@@ -1,10 +1,35 @@
+import { useEffect, useState } from "react";
 import logoCS from "../../assets/img/photoCS.png";
 import "./Home.css";
 
 const Home = ({ langageTab }) => {
-  return (
-    <>
-      <div className="home-page container">
+  const [isLoading, setIsLoading] = useState(true);
+  const [homeVisible, setHomeVisible] = useState(false);
+
+  useEffect(() => {
+    const transition = async () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+
+      setTimeout(() => {
+        setHomeVisible(true);
+      }, 2000);
+    };
+
+    transition();
+  });
+  return isLoading ? (
+    <div className="home-page-transition"></div>
+  ) : (
+    <div
+      className={!homeVisible ? "global-home-page" : "global-home-page static"}>
+      <div
+        className={
+          homeVisible
+            ? "home-page container homeVisible"
+            : "home-page container"
+        }>
         <section className="presentation-box">
           <div className="picture-box">
             <img src={logoCS} alt="photo de profil" />
@@ -32,7 +57,7 @@ const Home = ({ langageTab }) => {
               d'apprendre de nouveaux langages et de progresser dans ceux que je
               maitrise déjà. <br />
               Encadré par plusieurs développeurs professionnels depuis plus d'un
-              an, je me passionne pour le code qui ouvre un champs des possibles
+              an, je me passionne pour le code qui ouvre un champ des possibles
               pour moi, mais peut-être aussi pour vous?
             </p>
           </div>
@@ -53,7 +78,7 @@ const Home = ({ langageTab }) => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

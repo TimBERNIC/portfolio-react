@@ -10,10 +10,9 @@ import tripadvisor from "./assets/img/tripadvisor.png";
 import Footer from "./components/Footer/Footer";
 import EmojiS from "./assets/img/emojiS.png";
 import "./components/Footer/Footer.css";
-import Fullstack from "./pages/fullstack/Fullstack";
-import Frontend from "./pages/frontend/Frontend";
-import Backend from "./pages/backend/Backend";
-import Home from "./pages/home/Home";
+import Fullstack from "./pages/Fullstack/Fullstack";
+import Frontend from "./pages/Frontend/Frontend";
+import Home from "./pages/Home/Home";
 import CSSlogo from "./assets/img/css.png";
 import JSlogo from "./assets/img/javascript.png";
 import reactlogo from "./assets/img/react.png";
@@ -21,11 +20,10 @@ import reactNativeLogo from "./assets/img/react-native-1.svg";
 import nodeJs from "./assets/img/nodeJS.png";
 import express from "./assets/img/Expressjs.png";
 import mongoDB from "./assets/img/MongoDB.png";
-import Contact from "./pages/contact/Contact";
-import Header from "./components/Header/Header";
-import pageLogo from "./assets/img/portfolio.png";
-import { GrTechnology } from "react-icons/gr";
+import Contact from "./pages/Contact/Contact";
+import favicon from "./assets/img/favicon.png";
 import { useState } from "react";
+import Welcome from "./pages/Welcome/Welcome";
 
 const App = () => {
   const langageTab = [
@@ -136,8 +134,13 @@ const App = () => {
     <>
       <main>
         <Router>
-          <Header icon={pageLogo} />
-          <nav className="router-nav">
+          <nav className="router-nav change">
+            <Link to="/welcome" className="nav-title">
+              <div>
+                <img src={favicon} alt="" />
+              </div>
+              <p>Portfolio</p>
+            </Link>
             <div
               className={
                 burgerVisible ? "burger-button change" : "burger-button "
@@ -157,7 +160,7 @@ const App = () => {
               className={
                 burgerVisible ? "router-link-nav visible" : "router-link-nav"
               }>
-              <Link className="router-button" to="/">
+              <Link className="router-button" to="/home">
                 Accueil
               </Link>
               <Link className="router-button" to="/fullstack">
@@ -166,25 +169,22 @@ const App = () => {
               <Link className="router-button" to="/frontend">
                 Projets Frontend
               </Link>
-              {/* <Link className="router-button" to="/backend">
-              Projets Backend
-            </Link> */}
               <Link className="router-button" to="/contact">
                 Contact
               </Link>
             </div>
           </nav>
           <Routes>
-            <Route path="/" element={<Home langageTab={langageTab} />}></Route>
+            <Route path="/" element={<Welcome />}></Route>
+            <Route
+              path="/home"
+              element={<Home langageTab={langageTab} />}></Route>
             <Route
               path="/fullstack"
               element={<Fullstack projectsTab={projectsTab} />}></Route>
             <Route
               path="/frontend"
               element={<Frontend projectsTab={projectsTab} />}></Route>
-            <Route
-              path="/backend"
-              element={<Backend projectsTab={projectsTab} />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
         </Router>

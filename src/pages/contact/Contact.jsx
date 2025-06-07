@@ -1,14 +1,32 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import emailLogo from "../../assets/img/mail.jpg";
 import githubLogo from "../../assets/img/github.png";
 import linkedinLogo from "../../assets/img/linkedin.png";
 import CV from "../../assets/img/CV.pdf";
 import { FaDownload } from "react-icons/fa6";
 import { SiReaddotcv } from "react-icons/si";
-import "../contact/Contact.css";
+import "./Contact.css";
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const transition = async () => {
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 1000);
+    };
+
+    transition();
+  });
+
   return (
-    <div className="global-contact-box container">
+    <div
+      className={
+        isVisible
+          ? "global-contact-box container visible"
+          : "global-contact-box container"
+      }>
       <h2>Contact</h2>
       <p className="contact-description">
         N'hésitez pas à me contacter ou me joindre pour tout projets sur :{" "}

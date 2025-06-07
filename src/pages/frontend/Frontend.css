@@ -6,8 +6,11 @@
   margin-top: 70px;
   background-color: rgb(240, 239, 239);
   margin-bottom: 140px;
+  opacity: 0;
 }
-
+.visible {
+  opacity: 1;
+}
 .frontend > h2 {
   width: 100%;
   text-align: center;

@@ -1,0 +1,34 @@
+.welcome-global-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  z-index: 2000;
+  position: absolute;
+  text-decoration: none;
+}
+
+.text-contain {
+  max-width: 1500px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.black {
+  color: black;
+}
+.white {
+  color: white;
+  transition: 5s;
+}
+.white:hover {
+  color: rgba(35, 186, 228, 0.815);
+  transition: 1s;
+}

@@ -5,6 +5,11 @@
   flex-direction: column;
   margin-top: 70px;
   background-color: rgb(240, 239, 239);
+  height: 800px;
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
 }
 .global-contact-box p {
   text-align: center;
