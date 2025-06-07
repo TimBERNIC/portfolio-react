@@ -134,8 +134,8 @@ const App = () => {
     <>
       <main>
         <Router>
-          <nav className="router-nav change">
-            <Link to="/welcome" className="nav-title">
+          <header className="router-nav change">
+            <Link to="/home" className="nav-title">
               <div>
                 <img src={favicon} alt="" />
               </div>
@@ -173,7 +173,7 @@ const App = () => {
                 Contact
               </Link>
             </div>
-          </nav>
+          </header>
           <Routes>
             <Route path="/" element={<Welcome />}></Route>
             <Route
