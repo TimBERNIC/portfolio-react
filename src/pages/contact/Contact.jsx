@@ -48,7 +48,10 @@ const Contact = () => {
           <div className="contact-logo-box">
             <img src={linkedinLogo} alt="logo-linkedin" />
           </div>
-          : <a>Linkedin</a>
+          :{" "}
+          <a href="https://www.linkedin.com/in/timothée-nicolet-8b04a8329">
+            Linkedin
+          </a>
         </p>
         <div className="cv-box">
           <div className="cv-logo-box">
