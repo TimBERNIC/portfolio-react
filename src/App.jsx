@@ -7,12 +7,12 @@ import fletnixImg from "./assets/img/fletnix.png";
 import githubLogo from "./assets/img/github.png";
 import linkedinLogo from "./assets/img/linkedin.png";
 import tripadvisor from "./assets/img/tripadvisor.png";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer.jsx";
 import EmojiS from "./assets/img/emojiS.png";
 import "./components/Footer/Footer.css";
-import Fullstack from "./pages/Fullstack/Fullstack";
-import Frontend from "./pages/Frontend/Frontend";
-import Home from "./pages/Home/Home";
+import Fullstack from "./pages/Fullstack/Fullstack.jsx";
+import Frontend from "./pages/Frontend/Frontend.jsx";
+import Home from "./pages/Home/Home.jsx";
 import CSSlogo from "./assets/img/css.png";
 import JSlogo from "./assets/img/javascript.png";
 import reactlogo from "./assets/img/react.png";
@@ -20,10 +20,10 @@ import reactNativeLogo from "./assets/img/react-native-1.svg";
 import nodeJs from "./assets/img/nodeJS.png";
 import express from "./assets/img/Expressjs.png";
 import mongoDB from "./assets/img/MongoDB.png";
-import Contact from "./pages/Contact/Contact";
+import Contact from "./pages/Contact/Contact.jsx";
 import favicon from "./assets/img/favicon.png";
 import { useState } from "react";
-import Welcome from "./pages/Welcome/Welcome";
+import Welcome from "./pages/Welcome/Welcome.jsx";
 
 const App = () => {
   const langageTab = [
