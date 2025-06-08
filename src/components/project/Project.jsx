@@ -7,6 +7,7 @@ const Project = ({ project }) => {
       <div className="global-project-box">
         <h3 className="project-title-box">{project.title}</h3>
         <p className="project-subtitle-box">{project.subtitle}</p>
+
         <div className="project-details">
           <a className="img-project-box" href={project.url}>
             <img src={project.img} alt="image du projet" />
@@ -17,7 +18,10 @@ const Project = ({ project }) => {
               <span className="weigth">Technologies utilisées </span>:{" "}
               {project.techno}
             </p>
-            <p>{project.description}</p>
+            <p className="project-features">
+              <span className="weigth">Fonctionnalités mises en avant :</span>{" "}
+              {project.features}
+            </p>
           </div>
         </div>
       </div>

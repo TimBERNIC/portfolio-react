@@ -62,24 +62,25 @@ const langageTab = [
 const projectsTab = [
   {
     type: "fullstack",
-    title: "Deliver",
-    techno: "React/NodeJS/Express",
-    subtitle: "Replique du célèbre site de vente de nourriture",
-    img: deliverooImg,
-    description:
-      "Projet full-stack, avec un frontend monté en react et backend nodeJs/ express. Une version de rappel API vers l'API de Deliver est aussi disponible sur le github mais instable car la clé API doit être régulièrement renouvelée. Un base de donnée fictive à donc été montée en dur sur l'API utilisée. Gestion d'un panier de vente intégré.",
-    url: "https://deliveroos-copy.netlify.app/",
+    title: "TedVin (en cours de développement)",
+    techno: "React/NodeJS/Express/MongoDB",
+    subtitle: "Replique  du célèbre site de vente de vêtements",
+    img: TedVin,
+    features:
+      "Gestion d'une modale Login et Signup avec requêtes et post vers l'API et la Base de données MongoDB. Gestion du retour de token en cookie. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification et de sécurisation des données.",
+
+    url: "https://tedvin-frontend-bytbn.netlify.app/",
   },
   {
     type: "fullstack",
-    title: "TedVin (en cours de développement)",
-    techno: "React/NodeJS/Express/MongoDB",
+    title: "Deliver",
+    techno: "React/NodeJS/Express",
     subtitle:
-      "Replique complète (en cours) du célèbre site de vente de vêtements",
-    img: TedVin,
-    description:
-      "Projet full-stack, avec un frontend monté en react et backend nodeJs/ express. Gestion d'un page Login et Signup avec requêtes et post vers l'API et Base de données MongoDB. Gestion du retour de token en cookie. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification.",
-    url: "https://tedvin-frontend-bytbn.netlify.app/",
+      "Replique partielle du célèbre site de vente de nourriture (non responsive)",
+    features: "Gestion de panier, contact API et affichage de données",
+    img: deliverooImg,
+
+    url: "https://deliveroos-copy.netlify.app/",
   },
   {
     type: "frontend",
@@ -87,9 +88,10 @@ const projectsTab = [
     title: "FletNix",
     subtitle:
       "Replique frontend d'une page du célèbre site de streaming de video",
+    features:
+      "Mise en place de carousselles, gestion de style et de responsive.",
     img: fletnixImg,
-    description:
-      "Projet frontend en react, avec mise en place de carousselles, gestion de style et de responsive",
+    description: "Projet frontend en react",
     url: "https://fletnix-reproduction.netlify.app/",
   },
   {
@@ -97,9 +99,10 @@ const projectsTab = [
     techno: "Javascript/HTMLM/CSS",
     title: "TripAd",
     subtitle: "Replique frontend d'une page du célèbre site de voyage",
+    features:
+      "Mise en place du responsive, de la structuration d'une page et de carousselles.",
     img: tripadvisor,
-    description:
-      "Projet frontend en JS, HTML/CSS avec mise en place de carousselles, gestion de style et de responsive",
+
     url: "https://tripadvisor-copy-bytbn.netlify.app/",
   },
   {
@@ -108,8 +111,8 @@ const projectsTab = [
     title: "EmojiSearch",
     subtitle: "Application de tri et recherche d'Emojis (non responsive)",
     img: EmojiS,
-    description:
-      "Cours projet de filtre et de tri d'Emojis par mots-clés à partir d'un recueil de données Json",
+    features:
+      "Gestion de filtres et de tris d'objets par mots-clés à partir d'un recueil de données.",
     url: "https://emojisearch-bytbn.netlify.app/",
   },
 ];
