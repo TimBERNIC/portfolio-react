@@ -24,6 +24,7 @@ import Contact from "./pages/contact/Contact";
 import favicon from "./assets/img/favicon.png";
 import { useState } from "react";
 import Welcome from "./pages/Welcome/Welcome.jsx";
+import portFolio from "./assets/img/page-portfolio.png";
 const langageTab = [
   {
     name: "HTML5",
@@ -52,7 +53,6 @@ const langageTab = [
   {
     name: "ExpressJS",
     logo: express,
-    // changedclass: "center-logo",
   },
   {
     name: "MongoDB",
@@ -83,6 +83,18 @@ const projectsTab = [
 
     url: "https://deliveroos-copy.netlify.app/",
   },
+  {
+    type: "frontend",
+    techno: "React",
+    title: "Ce Portfolio",
+    subtitle: "Entièrement codé par mes soins en reactJS !",
+    features:
+      "Gestion routes, gestion de styles, de transitions, d'animations et de responsive.",
+    img: portFolio,
+    description: "Réalisé à partir de mon savoir faire",
+    url: "https://portfolio-tbn.netlify.app/",
+  },
+
   {
     type: "frontend",
     techno: "React",
