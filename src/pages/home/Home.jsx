@@ -3,7 +3,6 @@ import logoCS from "../../assets/img/photoCS.png";
 import "./Home.css";
 
 const Home = ({ langageTab }) => {
-  const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const transition = async () => {
@@ -55,9 +54,13 @@ const Home = ({ langageTab }) => {
         <h2>Languages et technologies </h2>
         <div className="languages-box">
           {langageTab.map((langageElement, index) => {
+            const className = langageElement.changedclass
+              ? ` ${langageElement.changedclass}`
+              : "language-logo-box ";
+
             return (
               <div key={index} className="language-box">
-                <div className="language-logo-box">
+                <div className={className}>
                   <img src={langageElement.logo} alt="" />
                 </div>
                 <h3>{langageElement.name}</h3>

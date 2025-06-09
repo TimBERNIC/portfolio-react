@@ -20,9 +20,15 @@ const Frontend = ({ projectsTab }) => {
       <h2>Frontend</h2>
       <p>Cliquez sur l'image pour accéder directement au projet</p>
       <section className="frontend-project-box">
-        {projectsTab.map((project) => {
+        {projectsTab.map((project, index) => {
           if (project.type === "frontend") {
-            return <Project project={project} projectsTab={projectsTab} />;
+            return (
+              <Project
+                project={project}
+                projectsTab={projectsTab}
+                key={index}
+              />
+            );
           }
         })}
       </section>

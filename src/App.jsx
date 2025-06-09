@@ -50,11 +50,12 @@ const langageTab = [
     logo: nodeJs,
   },
   {
-    name: "",
+    name: "ExpressJS",
     logo: express,
+    // changedclass: "center-logo",
   },
   {
-    name: "",
+    name: "MongoDB",
     logo: mongoDB,
   },
 ];
