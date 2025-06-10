@@ -68,7 +68,7 @@ const projectsTab = [
     subtitle: "Replique  du célèbre site de vente de vêtements",
     img: TedVin,
     features:
-      "Gestion d'une modale Login et Signup avec requêtes et post vers l'API et la Base de données MongoDB. Gestion du retour de token en cookie. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification et de sécurisation des données.",
+      "Gestion d'une modale Login et Signup avec requêtes et post vers l'API et la Base de données MongoDB. Gestion du retour de token en cookie. Gestion d'un système de paiement en ligne avec 'Stripe'. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification et de sécurisation des données.",
 
     url: "https://tedvin-frontend-bytbn.netlify.app/",
   },
