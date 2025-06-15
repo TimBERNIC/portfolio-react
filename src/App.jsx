@@ -22,6 +22,7 @@ import express from "./assets/img/Expressjs.png";
 import mongoDB from "./assets/img/MongoDB.png";
 import Contact from "./pages/contact/Contact";
 import favicon from "./assets/img/favicon.png";
+import marvel from "./assets/img/marvel.png";
 import { useState } from "react";
 import Welcome from "./pages/Welcome/Welcome.jsx";
 import portFolio from "./assets/img/page-portfolio.png";
@@ -63,9 +64,22 @@ const langageTab = [
 const projectsTab = [
   {
     type: "fullstack",
-    title: "TedVin (en cours de développement)",
+    title: "Marvel's World",
     techno: "React/NodeJS/Express/MongoDB",
-    subtitle: "Replique  du célèbre site de vente de vêtements",
+    subtitle:
+      "Création complète d'un site de référencement de la collection des comics et héros de l'univers Marvel",
+    img: marvel,
+    features:
+      "Création complète. En backend, express, gestion de voies et de routes selon le CRUD, contact d'une API tierce. Création d'un base dedonnée utilisateur avec mongoDB pour le login utilisateur avec systeme complet de sécurisation. Niveau frontend, monté en React avec router, gestion de cookies, du login, tri des apports de la Base de donnée. Responsive smartphone",
+    url: "https://marvelsworld.netlify.app/",
+  },
+
+  {
+    type: "fullstack",
+    title: "TedVin",
+    techno: "React/NodeJS/Express/MongoDB",
+    subtitle:
+      "Replique  du célèbre site de vente de vêtements (non responsive)",
     img: TedVin,
     features:
       "Gestion d'une modale Login et Signup avec requêtes et post vers l'API et la Base de données MongoDB. Gestion du retour de token en cookie. Gestion d'un système de paiement en ligne avec 'Stripe'. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification et de sécurisation des données.",
@@ -87,7 +101,7 @@ const projectsTab = [
     type: "frontend",
     techno: "React",
     title: "Ce Portfolio",
-    subtitle: "Entièrement codé par mes soins en reactJS !",
+    subtitle: "Entièrement codé en reactJS !",
     features:
       "Gestion routes, gestion de styles, de transitions, d'animations et de responsive.",
     img: portFolio,
