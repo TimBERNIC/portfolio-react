@@ -10,7 +10,11 @@ const Project = ({ project }) => {
 
         <div className="project-details">
           <a className="img-project-box" href={project.url}>
-            <img src={project.img} alt="image du projet" />
+            <img
+              src={project.img}
+              alt="image du projet"
+              className="img-project"
+            />
           </a>
           <div className="project-desciption-box">
             <p>

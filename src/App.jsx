@@ -26,6 +26,8 @@ import marvel from "./assets/img/marvel.png";
 import { useState } from "react";
 import Welcome from "./pages/Welcome/Welcome.jsx";
 import portFolio from "./assets/img/page-portfolio.png";
+import BnBair from "./assets/img/BnbAir.gif";
+
 const langageTab = [
   {
     name: "HTML5",
@@ -62,6 +64,17 @@ const langageTab = [
 ];
 
 const projectsTab = [
+  {
+    type: "frontend",
+    title: "BnBair",
+    techno: "ReactNative, requête vers API en Express, mongoDB",
+    subtitle:
+      "Reproduction de l'application mobile (Android et Ios) du site de réservation et de location",
+    img: BnBair,
+    features:
+      "Reproduction du celèbre site mobile, avec géolocaliseur, gestion de la caméra du téléphonecpour prise de photos et des dossiers photos. Ergonomie et router ReactNative. Pour des raisons techniques ce projet n'est ni déployé sur l'app Store ni sur le google Store.",
+    url: "",
+  },
   {
     type: "fullstack",
     title: "Marvel's World",
