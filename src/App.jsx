@@ -119,7 +119,6 @@ const projectsTab = [
       "Replique partielle du célèbre site de vente de nourriture (non responsive)",
     img: deliverooImg,
     features: "Gestion de panier, contact API et affichage de données",
-
     url: "https://deliveroos-copy.netlify.app/",
   },
   {
