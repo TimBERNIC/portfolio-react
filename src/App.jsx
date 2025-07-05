@@ -27,6 +27,7 @@ import { useState } from "react";
 import Welcome from "./pages/Welcome/Welcome.jsx";
 import portFolio from "./assets/img/page-portfolio.png";
 import BnBair from "./assets/img/BnbAir.gif";
+import TORPG from "./assets/img/TO-RPG.png";
 
 const langageTab = [
   {
@@ -64,6 +65,17 @@ const langageTab = [
 ];
 
 const projectsTab = [
+  {
+    type: "fullstack",
+    title: "TO-RPG",
+    techno: "ReactNative/Expo, API en Express, et base de données en mongoDB",
+    subtitle:
+      "Création d'une application reactNative de gestion de tour de jeu pour les parties de Jeu de rôle",
+    img: TORPG,
+    features:
+      "Intégration d'une base de donnée avec un modèle de personnage de jeu de rôle, possibilité d'en créer selon le modèle. Authentification sécurisée, Login/SignUp, gestion d'un algorithmie de tour de jeu variable selon certaines caractéristiques et modulable et d'effets pouvant impacter l'environnement de ce dernier",
+    url: "https://youtu.be/YV9XQYzk9ro",
+  },
   {
     type: "frontend",
     title: "BnBair",
@@ -105,8 +117,8 @@ const projectsTab = [
     techno: "React/NodeJS/Express",
     subtitle:
       "Replique partielle du célèbre site de vente de nourriture (non responsive)",
-    features: "Gestion de panier, contact API et affichage de données",
     img: deliverooImg,
+    features: "Gestion de panier, contact API et affichage de données",
 
     url: "https://deliveroos-copy.netlify.app/",
   },

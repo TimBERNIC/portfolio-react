@@ -18,7 +18,6 @@ const Project = ({ project }) => {
           </a>
           <div className="project-desciption-box">
             <p>
-              {" "}
               <span className="weigth">Technologies utilisées </span>:{" "}
               {project.techno}
             </p>
