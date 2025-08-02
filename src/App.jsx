@@ -28,20 +28,11 @@ import Welcome from "./pages/Welcome/Welcome.jsx";
 import portFolio from "./assets/img/page-portfolio.png";
 import BnBair from "./assets/img/BnbAir.gif";
 import TORPG from "./assets/img/TO-RPG.png";
+import fixnicolet from "./assets/img/fixnicolet.jpg";
+import typescriptLogo from "./assets/img/typescript.png";
+import tailwindLogo from "./assets/img/tailwind.svg";
 
 const langageTab = [
-  {
-    name: "HTML5",
-    logo: htmlLogo,
-  },
-  {
-    name: "CSS",
-    logo: CSSlogo,
-  },
-  {
-    name: "JavaScript",
-    logo: JSlogo,
-  },
   {
     name: "ReactJS",
     logo: reactlogo,
@@ -49,6 +40,26 @@ const langageTab = [
   {
     name: "ReactNative",
     logo: reactNativeLogo,
+  },
+  {
+    name: "JavaScript",
+    logo: JSlogo,
+  },
+  {
+    name: "TypeScript",
+    logo: typescriptLogo,
+  },
+  {
+    name: "CSS",
+    logo: CSSlogo,
+  },
+  {
+    name: "TailwindCSS",
+    logo: tailwindLogo,
+  },
+  {
+    name: "HTML5",
+    logo: htmlLogo,
   },
   {
     name: "NodeJS",
@@ -65,6 +76,18 @@ const langageTab = [
 ];
 
 const projectsTab = [
+  {
+    type: "fullstack",
+    title: "Site Fix Nicolet",
+    techno:
+      "Font-end : ReactJS, TypeScript, TailwindCSS, Back-end : API en Express, et base de données en mongoDB",
+    subtitle:
+      "Création d'un site professionnel de référencement des services du guitariste concertiste Fix Nicolet",
+    img: fixnicolet,
+    features:
+      "Réalisation d'un site pour le guitariste concertiste Fix Nicolet, avec un back-end pour la gestion de ses différents projets, concerts, liens vers les sites de vente de CD, et autres... Création notamment d'un petit front-end pour permettre la gestion utilisateur du site",
+    url: "https://fixnicolet.net/",
+  },
   {
     type: "fullstack",
     title: "TO-RPG",
