@@ -78,9 +78,9 @@ const langageTab = [
 const projectsTab = [
   {
     type: "fullstack",
-    title: "Site Fix Nicolet",
+    title: "Site Fix Nicolet (en cours de développement)",
     techno:
-      "Font-end : ReactJS, TypeScript, TailwindCSS, Back-end : API en Express, et base de données en mongoDB",
+      "Font-end : ReactJS, TypeScript, TailwindCSS, Back-end (en cours de développement): API en Express, et base de données en mongoDB",
     subtitle:
       "Création d'un site professionnel de référencement des services du guitariste concertiste Fix Nicolet",
     img: fixnicolet,
