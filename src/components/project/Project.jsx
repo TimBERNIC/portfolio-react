@@ -25,6 +25,28 @@ const Project = ({ project }) => {
               <span className="weigth">Fonctionnalités mises en avant :</span>{" "}
               {project.features}
             </p>
+            <div className="project-features-box">
+              {project.githubFront && (
+                <p className="project-features">
+                  <span className="weigth">Github Front :</span>{" "}
+                  {project.githubFront === "privé" ? (
+                    <div> Repo privé</div>
+                  ) : (
+                    <a href={project.githubFront}>Lien</a>
+                  )}
+                </p>
+              )}
+              {project.githubBack && (
+                <p className="project-features">
+                  <span className="weigth">Github Back :</span>{" "}
+                  {project.githubBack === "privé" ? (
+                    <div> Repo privé</div>
+                  ) : (
+                    <a href={project.githubBack}>Lien</a>
+                  )}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>

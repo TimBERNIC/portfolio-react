@@ -78,15 +78,17 @@ const langageTab = [
 const projectsTab = [
   {
     type: "fullstack",
-    title: "Site Fix Nicolet (en cours de développement)",
+    title: "Web-App/Site Fix Nicolet",
     techno:
-      "Font-end : ReactJS, TypeScript, TailwindCSS, Back-end (en cours de développement): API en Express, et base de données en mongoDB",
+      "Font-end : ReactJS, TypeScript, TailwindCSS, Back-end: API en Express, usage de Cors, helmet, multer... et base de données en mongoDB",
     subtitle:
-      "Création d'un site professionnel de référencement des services du guitariste concertiste Fix Nicolet",
+      "Création d'un complexe fullstack de sites professionnel de référencement des services du guitariste concertiste Fix Nicolet, avec notamment d'un second front-end Adminitrateur pour permettre la gestion utilisateur du site",
     img: fixnicolet,
     features:
-      "Réalisation d'un site pour le guitariste concertiste Fix Nicolet, avec un back-end pour la gestion de ses différents projets, concerts, liens vers les sites de vente de CD, et autres... Création notamment d'un petit front-end pour permettre la gestion utilisateur du site",
+      "front-end avec gestion des langues, traduite en Français, Anglais, Espagnol. Modification des données à partir d'un second site et de l'API et la BDD pour la gestion des projets, concerts, présentation des CDs, médias... le tout avec accès sécurisé au back-end",
     url: "https://fixnicolet.net/",
+    githubFront: "privé",
+    githubBack: "privé",
   },
   {
     type: "fullstack",
@@ -98,6 +100,8 @@ const projectsTab = [
     features:
       "Intégration d'une base de donnée avec un modèle de personnage de jeu de rôle, possibilité d'en créer selon le modèle. Authentification sécurisée, Login/SignUp, gestion d'un algorithmie de tour de jeu variable selon certaines caractéristiques et modulable et d'effets pouvant impacter l'environnement de ce dernier",
     url: "https://youtu.be/YV9XQYzk9ro",
+    githubFront: "privé",
+    githubBack: "privé",
   },
   {
     type: "frontend",
@@ -109,6 +113,8 @@ const projectsTab = [
     features:
       "Reproduction du celèbre site mobile, avec géolocaliseur, gestion de la caméra du téléphonecpour prise de photos et des dossiers photos. Ergonomie et router ReactNative. Pour des raisons techniques ce projet n'est ni déployé sur l'app Store ni sur le google Store.",
     url: "",
+    githubFront: "https://github.com/TimBERNIC/bnbair-front-app-mobile",
+    githubBack: "",
   },
   {
     type: "fullstack",
@@ -120,6 +126,8 @@ const projectsTab = [
     features:
       "Création complète. En backend, express, gestion de voies et de routes selon le CRUD, contact d'une API tierce. Création d'un base dedonnée utilisateur avec mongoDB pour le login utilisateur avec systeme complet de sécurisation. Niveau frontend, monté en React avec router, gestion de cookies, du login, tri des apports de la Base de donnée. Responsive smartphone",
     url: "https://marvelsworld.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/marvel-frontend",
+    githubBack: "https://github.com/TimBERNIC/marvel-backend",
   },
 
   {
@@ -133,6 +141,8 @@ const projectsTab = [
       "Gestion d'une modale Login et Signup avec requêtes et post vers l'API et la Base de données MongoDB. Gestion du retour de token en cookie. Gestion d'un système de paiement en ligne avec 'Stripe'. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification et de sécurisation des données.",
 
     url: "https://tedvin-frontend-bytbn.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/TedVin-frontend",
+    githubBack: "https://github.com/TimBERNIC/tedvin-backend",
   },
   {
     type: "fullstack",
@@ -143,6 +153,8 @@ const projectsTab = [
     img: deliverooImg,
     features: "Gestion de panier, contact API et affichage de données",
     url: "https://deliveroos-copy.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/deliveroos-copy-frontend",
+    githubBack: "https://github.com/TimBERNIC/deliveroos-copy-backend",
   },
   {
     type: "frontend",
@@ -154,6 +166,8 @@ const projectsTab = [
     img: portFolio,
     description: "Réalisé à partir de mon savoir faire",
     url: "https://portfolio-tbn.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/portfolio-react",
+    githubBack: "",
   },
 
   {
@@ -167,6 +181,8 @@ const projectsTab = [
     img: fletnixImg,
     description: "Projet frontend en react",
     url: "https://fletnix-reproduction.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/FLETNIX-homepage-front-React",
+    githubBack: "",
   },
   {
     type: "frontend",
@@ -176,8 +192,9 @@ const projectsTab = [
     features:
       "Mise en place du responsive, de la structuration d'une page et de carousselles.",
     img: tripadvisor,
-
     url: "https://tripadvisor-copy-bytbn.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/tripatvisor-front-training",
+    githubBack: "",
   },
   {
     type: "frontend",
@@ -188,6 +205,8 @@ const projectsTab = [
     features:
       "Gestion de filtres et de tris d'objets par mots-clés à partir d'un recueil de données.",
     url: "https://emojisearch-bytbn.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/Emoji-search",
+    githubBack: "",
   },
 ];
 
