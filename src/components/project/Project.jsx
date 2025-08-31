@@ -17,10 +17,10 @@ const Project = ({ project }) => {
             />
           </a>
           <div className="project-desciption-box">
-            <p>
-              <span className="weigth">Technologies utilisées </span>:{" "}
-              {project.techno}
-            </p>
+            <div className="project-features">
+              <span className="weigth">Technologies utilisées :</span>
+              <p>{project.techno}</p>
+            </div>
             <p className="project-features">
               <span className="weigth">Fonctionnalités mises en avant :</span>{" "}
               {project.features}
@@ -28,21 +28,34 @@ const Project = ({ project }) => {
             <div className="project-features-box">
               {project.githubFront && (
                 <p className="project-features">
-                  <span className="weigth">Github Front :</span>{" "}
+                  <span className="weigth">Front-end :</span>{" "}
                   {project.githubFront === "privé" ? (
                     <div> Repo privé</div>
                   ) : (
-                    <a href={project.githubFront}>Lien</a>
+                    <a
+                      href={project.githubFront}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-features-link">
+                      Cliquez ici pour voir le repo !
+                    </a>
                   )}
                 </p>
               )}
               {project.githubBack && (
                 <p className="project-features">
-                  <span className="weigth">Github Back :</span>{" "}
+                  <span className="weigth">Back-end :</span>{" "}
                   {project.githubBack === "privé" ? (
                     <div> Repo privé</div>
                   ) : (
-                    <a href={project.githubBack}>Lien</a>
+                    <a
+                      href={project.githubBack}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-features-link">
+                      {" "}
+                      Cliquez ici pour voir le repo !
+                    </a>
                   )}
                 </p>
               )}
