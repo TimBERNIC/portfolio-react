@@ -16,7 +16,7 @@ body {
 }
 .router-nav {
   display: flex;
-  background-color: rgb(0, 0, 0);
+  background-color: #050505;
   box-shadow: 4px 18px 50px -10px #000000;
   width: 100%;
   top: 0px;
@@ -66,7 +66,7 @@ body {
   top: -100vh;
   right: 0;
   transition: all 2s ease-out;
-  background-color: rgb(0, 0, 0);
+  background-color: #050505;
 }
 
 .router-button {

@@ -7,6 +7,7 @@ import CV from "../../assets/img/CV.pdf";
 import { FaDownload } from "react-icons/fa6";
 import { SiReaddotcv } from "react-icons/si";
 import "./Contact.css";
+
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,31 +33,23 @@ const Contact = () => {
         N'hésitez pas à me contacter ou me joindre pour tout projets sur :{" "}
       </p>
       <div className="contact-box">
-        <p>
-          <div className="contact-logo-box">
+        <div className="contact-logo-global-box">
+          <a href="mailto:nicolet.t@hotmail.fr" className="contact-logo-box">
             <img src={emailLogo} alt="logo-mail" />
-          </div>
-          : <a href="mailto:nicolet.t@hotmail.fr">nicolet.t@hotmail.com</a>
-        </p>
-        <p>
-          <div className="contact-logo-box">
-            <img src={githubLogo} alt="logo-git" />
-          </div>
-          : <a href="https://github.com/TimBERNIC">Github</a>
-        </p>
-        <p>
-          <div className="contact-logo-box">
-            <img src={linkedinLogo} alt="logo-linkedin" />
-          </div>
-          :{" "}
-          <a href="https://www.linkedin.com/in/timothée-nicolet-8b04a8329">
-            Linkedin
           </a>
-        </p>
+          <a href="https://github.com/TimBERNIC" className="contact-logo-box">
+            <img src={githubLogo} alt="logo-github" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/timothée-nicolet-8b04a8329"
+            className="contact-logo-box">
+            <img src={linkedinLogo} alt="logo-linkedin" />
+          </a>
+        </div>
         <div className="cv-box">
           <div className="cv-logo-box">
             <SiReaddotcv />
-          </div>{" "}
+          </div>
           :<a href={CV}>Accédez à mon CV</a>
           <a href={CV} download="CV">
             <FaDownload />

@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState, lazy, Suspense } from "react";
 import "./App.css";
+
+// Imports des images
 import htmlLogo from "./assets/img/html.png";
 import deliverooImg from "./assets/img/deliveroo.png";
 import TedVin from "./assets/img/tedvin.png";
@@ -7,12 +10,7 @@ import fletnixImg from "./assets/img/fletnix.png";
 import githubLogo from "./assets/img/github.png";
 import linkedinLogo from "./assets/img/linkedin.png";
 import tripadvisor from "./assets/img/tripadvisor.png";
-import Footer from "./components/Footer/Footer";
 import EmojiS from "./assets/img/emojiS.png";
-import "./components/Footer/Footer.css";
-import Fullstack from "./pages/fullstack/Fullstack";
-import Frontend from "./pages/frontend/Frontend";
-import Home from "./pages/home/Home";
 import CSSlogo from "./assets/img/css.png";
 import JSlogo from "./assets/img/javascript.png";
 import reactlogo from "./assets/img/react.png";
@@ -20,17 +18,28 @@ import reactNativeLogo from "./assets/img/react-native-1.svg";
 import nodeJs from "./assets/img/nodeJS.png";
 import express from "./assets/img/Expressjs.png";
 import mongoDB from "./assets/img/MongoDB.png";
-import Contact from "./pages/contact/Contact";
 import favicon from "./assets/img/favicon.png";
 import marvel from "./assets/img/marvel.png";
-import { useState } from "react";
-import Welcome from "./pages/Welcome/Welcome.jsx";
 import portFolio from "./assets/img/page-portfolio.png";
 import BnBair from "./assets/img/BnbAir.gif";
 import TORPG from "./assets/img/TO-RPG.png";
 import fixnicolet from "./assets/img/fixnicolet.jpg";
 import typescriptLogo from "./assets/img/typescript.png";
 import tailwindLogo from "./assets/img/tailwind.svg";
+
+// Imports des composants
+import LoadingSpinner from "./components/LoadingSpinner";
+import "./components/Footer/Footer.css";
+
+// Lazy loading des composants
+const Footer = lazy(() => import("./components/Footer/Footer"));
+
+// Lazy loading des pages
+const Welcome = lazy(() => import("./pages/Welcome/Welcome.jsx"));
+const Home = lazy(() => import("./pages/home/Home"));
+const Fullstack = lazy(() => import("./pages/fullstack/Fullstack"));
+const Frontend = lazy(() => import("./pages/frontend/Frontend"));
+const Contact = lazy(() => import("./pages/contact/Contact"));
 
 const langageTab = [
   {
@@ -288,22 +297,37 @@ const App = () => {
               </Link>
             </div>
           </header>
-          <Routes>
-            <Route path="/" element={<Welcome />}></Route>
-            <Route
-              path="/home"
-              element={<Home langageTab={langageTab} />}></Route>
-            <Route
-              path="/fullstack"
-              element={<Fullstack projectsTab={projectsTab} />}></Route>
-            <Route
-              path="/frontend"
-              element={<Frontend projectsTab={projectsTab} />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Welcome />}></Route>
+              <Route
+                path="/home"
+                element={<Home langageTab={langageTab} />}></Route>
+              <Route
+                path="/fullstack"
+                element={<Fullstack projectsTab={projectsTab} />}></Route>
+              <Route
+                path="/frontend"
+                element={<Frontend projectsTab={projectsTab} />}></Route>
+              <Route path="/contact" element={<Contact />}></Route>
+            </Routes>
+          </Suspense>
         </Router>
       </main>
-      <Footer linkTab={linkTab} />
+      <Suspense
+        fallback={
+          <div
+            style={{
+              height: "100px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}>
+            Chargement du footer...
+          </div>
+        }>
+        <Footer linkTab={linkTab} />
+      </Suspense>
     </>
   );
 };
