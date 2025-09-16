@@ -18,24 +18,42 @@
 .img-project-box {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  width: 50%;
+  align-items: center;
+  width: 100%; /* prend tout l'espace de son parent */
   height: 300px;
   border-radius: 5px;
   overflow: hidden;
-  background-color: #000000;
+  background-color: #000;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.img-project-box > img {
-  object-fit: cover;
+.img-project-box > img,
+.img-project-box > video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 5px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
 }
+
+/* S'assurer que les liens n'ont pas de styles par défaut */
+a.img-project-box {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Supprimer complètement le border au hover pour éviter le bord bleu */
 .img-project-box:hover {
   opacity: 0.9;
   box-shadow: 4px 18px 50px -10px #000000;
-  border: solid 1px rgba(192, 192, 192, 0.733);
   transition: 1s;
 }
 .project-details {

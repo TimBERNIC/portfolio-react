@@ -29,4 +29,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 0;
+}
+
+/* S'assurer que tous les projets ont la même largeur */
+.frontend-project-box .global-project-box {
+  width: 100%;
+  max-width: 100%;
 }

@@ -4,26 +4,26 @@ import "./App.css";
 
 // Imports des images
 import htmlLogo from "./assets/img/html.png";
-import deliverooImg from "./assets/img/deliveroo.png";
-import TedVin from "./assets/img/tedvin.png";
-import fletnixImg from "./assets/img/fletnix.png";
+import deliverooImg from "./assets/img/deliveroo.webp";
+import TedVin from "./assets/img/tedvin.webp";
+import fletnixImg from "./assets/img/fletnix.webp";
 import githubLogo from "./assets/img/github.png";
 import linkedinLogo from "./assets/img/linkedin.png";
 import tripadvisor from "./assets/img/tripadvisor.png";
-import EmojiS from "./assets/img/emojiS.png";
-import CSSlogo from "./assets/img/css.png";
+import EmojiS from "./assets/img/emojiS.webp";
+import CSSlogo from "./assets/img/css.webp";
 import JSlogo from "./assets/img/javascript.png";
 import reactlogo from "./assets/img/react.png";
 import reactNativeLogo from "./assets/img/react-native-1.svg";
 import nodeJs from "./assets/img/nodeJS.png";
 import express from "./assets/img/Expressjs.png";
 import mongoDB from "./assets/img/MongoDB.png";
-import favicon from "./assets/img/favicon.png";
-import marvel from "./assets/img/marvel.png";
+import favicon from "./assets/img/favicon.webp";
+import marvel from "./assets/img/marvel.webp";
 import portFolio from "./assets/img/page-portfolio.png";
-import BnBair from "./assets/img/BnbAir.gif";
+import BnBair from "./assets/img/BnbAir.webm";
 import TORPG from "./assets/img/TO-RPG.png";
-import fixnicolet from "./assets/img/fixnicolet.jpg";
+import fixnicolet from "./assets/img/fixnicolet.webp";
 import typescriptLogo from "./assets/img/typescript.png";
 import tailwindLogo from "./assets/img/tailwind.svg";
 

@@ -9,13 +9,31 @@ const Project = ({ project }) => {
         <p className="project-subtitle-box">{project.subtitle}</p>
 
         <div className="project-details">
-          <a className="img-project-box" href={project.url}>
-            <img
-              src={project.img}
-              alt="image du projet"
-              className="img-project"
-            />
-          </a>
+          {project.title === "BnBair" ? (
+            <div className="img-project-box">
+              <video
+                src={project.img}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="img-project"
+              />
+            </div>
+          ) : (
+            <a
+              className="img-project-box"
+              href={project.url}
+              onClick={(e) => {
+                if (project.url === "") e.preventDefault();
+              }}>
+              <img
+                src={project.img}
+                alt="image du projet"
+                className="img-project"
+              />
+            </a>
+          )}
           <div className="project-desciption-box">
             <div className="project-features">
               <span className="weigth">Technologies utilisées :</span>
