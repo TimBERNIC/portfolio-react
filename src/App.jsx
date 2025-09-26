@@ -26,6 +26,11 @@ import TORPG from "./assets/img/TO-RPG.png";
 import fixnicolet from "./assets/img/fixnicolet.webp";
 import typescriptLogo from "./assets/img/typescript.png";
 import tailwindLogo from "./assets/img/tailwind.svg";
+import weatherApp from "./assets/img/weather-app.png";
+import sassLogo from "./assets/img/sass.png";
+import svelteLogo from "./assets/img/svelte.png";
+import vitestLogo from "./assets/img/vitest.png";
+import jestLogo from "./assets/img/jest.png";
 
 // Imports des composants
 import LoadingSpinner from "./components/LoadingSpinner";
@@ -51,6 +56,10 @@ const langageTab = [
     logo: reactNativeLogo,
   },
   {
+    name: "SvelteKit5",
+    logo: svelteLogo,
+  },
+  {
     name: "JavaScript",
     logo: JSlogo,
   },
@@ -61,6 +70,10 @@ const langageTab = [
   {
     name: "CSS",
     logo: CSSlogo,
+  },
+  {
+    name: "SCSS",
+    logo: sassLogo,
   },
   {
     name: "TailwindCSS",
@@ -82,9 +95,31 @@ const langageTab = [
     name: "MongoDB",
     logo: mongoDB,
   },
+  {
+    name: "Vitest",
+    logo: vitestLogo,
+  },
+  {
+    name: "Jest",
+    logo: jestLogo,
+  },
 ];
 
 const projectsTab = [
+  {
+    type: "frontend",
+    title: "Weather App",
+    techno:
+      "Font-end : SvelteKit5, TypeScript, TailwindCSS, test : Vitest, Back-end: API en OnpenSource(wttr.in)",
+    subtitle:
+      "Application de météo avec recherche par ville et affichage de la météo",
+    img: weatherApp,
+    features:
+      "Gestion des données de l'API wttr.in, router sveltekit5, tailwindcss, tests de fonctionnalités avec Vitest",
+    url: "https://weather-app-tbn.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/weather-app.git",
+    githubBack: "",
+  },
   {
     type: "fullstack",
     title: "Web-App/Site Fix Nicolet",
