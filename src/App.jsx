@@ -110,7 +110,7 @@ const projectsTab = [
     type: "frontend",
     title: "Weather App",
     techno:
-      "Font-end : SvelteKit5, TypeScript, TailwindCSS, test : Vitest, Back-end: API en OnpenSource(wttr.in)",
+      "Font-end : SvelteKit5, TypeScript, TailwindCSS, test : Vitest, axios pour la requête vers l'API OpenSource wttr.in",
     subtitle:
       "Application de météo avec recherche par ville et affichage de la météo",
     img: weatherApp,
