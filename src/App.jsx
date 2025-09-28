@@ -31,6 +31,7 @@ import sassLogo from "./assets/img/sass.png";
 import svelteLogo from "./assets/img/svelte.png";
 import vitestLogo from "./assets/img/vitest.png";
 import jestLogo from "./assets/img/jest.png";
+import rickMortyApp from "./assets/img/rick-morty.jpg";
 
 // Imports des composants
 import LoadingSpinner from "./components/LoadingSpinner";
@@ -106,6 +107,20 @@ const langageTab = [
 ];
 
 const projectsTab = [
+  {
+    type: "frontend",
+    title: "Rick & Morty App",
+    techno:
+      "Font-end : SvelteKit5, TypeScript, TailwindCSS, graphQL pour la requête vers l'API OpenSource https://rickandmortyapi.com/",
+    subtitle:
+      "Application de tri et recherche de personnages de la série Rick & Morty",
+    img: rickMortyApp,
+    features:
+      "Gestion des données de l'API rickandmortyapi.com, router svelteKit5, tailwindcss, installation et utilisation de graphQL",
+    url: "https://rick-morty-characters-search.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/rick-morty-app.git",
+    githubBack: "",
+  },
   {
     type: "frontend",
     title: "Weather App",
