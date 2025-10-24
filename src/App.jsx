@@ -32,6 +32,7 @@ import svelteLogo from "./assets/img/svelte.png";
 import vitestLogo from "./assets/img/vitest.png";
 import jestLogo from "./assets/img/jest.png";
 import rickMortyApp from "./assets/img/rick-morty.jpg";
+import tokenGeneratorApp from "./assets/img/token-generator.jpg";
 
 // Imports des composants
 import LoadingSpinner from "./components/LoadingSpinner";
@@ -107,6 +108,20 @@ const langageTab = [
 ];
 
 const projectsTab = [
+   {
+    type: "frontend",
+    title: "Token Generator App",
+    techno:
+      "Font-end : Javascript pur, HTML, CSS",
+    subtitle:
+      "Application de génération de tokens pour jeu de rôle ou de plateau à partir d'image avec options de personnalisation",
+    img: tokenGeneratorApp,
+    features:
+      "Importation d'images, gestion des calques avec options de personnalisation (taille, rotation, positionnement), génération et téléchargement d'une image finale au format PNG",
+    url: "https://rpg-free-token-generator.netlify.app/",
+    githubFront: "https://github.com/TimBERNIC/RPGImageToTokenGenerator",
+    githubBack: "",
+  },
   {
     type: "frontend",
     title: "Rick & Morty App",

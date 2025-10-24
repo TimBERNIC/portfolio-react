@@ -44,10 +44,10 @@ const Home = ({ langageTab }) => {
             <span className="weight">ReactNative</span>. Je n'ai de cesse que
             d'apprendre de nouveaux langages et de progresser dans ceux que je
             maitrise déjà. <br />
-            Encadré par plusieurs développeurs professionnels depuis plus d'un
-            an, je me passionne pour le code qui ouvre un champ des possibles
-            pour moi, mais peut-être aussi pour vous?
+            Travaillant actuellement pour l'entreprise <a href="https://www.fdti.eu/" className="weight link">FDTI Consulting</a>, je me passionne pour le code qui ouvre un champ des possibles
+            pour moi, mais peut-être aussi pour vous? <br />
           </p>
+           <p>Je recherche actuellement une alternance (orientée Développeur IA) à partir d'Avril 2024.</p> 
         </div>
       </section>
       <section className="languages-techno-box">
