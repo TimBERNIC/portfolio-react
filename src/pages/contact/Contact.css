@@ -1,14 +1,16 @@
 .global-contact-box {
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
   flex-direction: column;
   margin-top: 70px;
-  background-color: rgb(240, 239, 239);
-  height: 800px;
+  background-color: var(--color-gray-bg-light);
+  min-height: 60vh;
+  padding-bottom: 140px;
   opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
-.visible {
+.global-contact-box.visible {
   opacity: 1;
 }
 .global-contact-box p {
@@ -43,10 +45,13 @@
   color: black;
   text-decoration: none;
 }
-
 .global-contact-box a:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+.global-contact-box a:focus-visible {
+  outline: 2px solid var(--color-accent, #0073C8);
+  outline-offset: 2px;
 }
 .contact-logo-global-box {
   display: flex;
@@ -60,20 +65,50 @@
   width: 50px;
   height: 50px;
 }
-
 .contact-logo-box > img {
   width: 100%;
 }
-
 .cv-box {
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
+.cv-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-gray-border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.cv-download-btn:hover {
+  background: var(--color-gray-hover);
+  border-color: var(--color-accent, #0073C8);
+  opacity: 1;
+}
+.cv-download-btn:focus-visible {
+  outline: 2px solid var(--color-accent, #0073C8);
+  outline-offset: 2px;
+}
 .cv-box > a {
   text-decoration: none;
   color: black;
+}
+.cv-box > a:focus-visible {
+  outline: 2px solid var(--color-accent, #0073C8);
+  outline-offset: 2px;
 }
 
 @media (max-width: 800px) {

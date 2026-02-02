@@ -1,72 +1,189 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  /* Couleurs (injectées depuis lib/data/colors.ts, fallbacks ci-dessous) */
+  --color-bg: rgb(222, 220, 220);
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #4a4a4a;
+  --color-accent: #0073C8;
+  --color-header: #050505;
+  --color-link-hover: rgb(158, 158, 158);
+  --color-white: rgb(255, 255, 255);
+  --color-black: #000000;
+  --color-gray-border: rgb(188, 188, 193);
+  --color-gray-border-light: rgb(183, 181, 181);
+  --color-gray-bg-light: rgb(240, 239, 239);
+  --color-gray-hover: rgb(240, 240, 240);
+  /* Espacements */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 20px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  /* Typographie */
+  --font-family: "Exo", sans-serif;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --line-height-tight: 1.35;
+  --line-height-body: 1.5;
+  /* Rayons & Ombres */
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 20px;
+  --shadow-card: 4px 18px 50px -10px #000000;
+}
+
 body {
-  font-family: "Exo", sans-serif;
-  background-color: rgb(222, 220, 220);
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  line-height: var(--line-height-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .container {
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 0 50px 30px;
   min-width: 300px;
   max-width: 1024px;
-
-  border-radius: 20px;
-  box-shadow: 4px 18px 50px -10px #000000;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
 }
+
+/* Header : fixe en haut */
 .router-nav {
   display: flex;
-  background-color: #050505;
-  box-shadow: 4px 18px 50px -10px #000000;
+  background-color: var(--color-header);
+  box-shadow: var(--shadow-card);
   width: 100%;
-  top: 0px;
+  top: 0;
+  left: 0;
   z-index: 100;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  padding: 0 20px;
+  padding: 0 var(--space-sm);
+  min-height: 50px;
 }
 
 .nav-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: var(--space-xs);
   color: white;
-  width: 300px;
-  height: 50px;
+  height: 44px;
   text-decoration: none;
+  flex-shrink: 0;
+}
+.nav-title:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 .nav-title > div {
-  width: 20%;
-  height: 100%;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
 }
 .nav-title > p {
   font-weight: bold;
   text-decoration: none;
 }
-.nav-title > p:hover {
-  color: #fe1efea5;
-  transition: 0.5s;
+.nav-title:hover > p {
+  color: var(--color-accent);
+  transition: 0.3s;
 }
 .nav-title > div > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
+/* Nav desktop : liens horizontaux, centrés, même hauteur */
+.nav-links-inline {
+  display: none;
+}
+.nav-links-inline .router-button {
+  min-width: auto;
+  padding: 0 var(--space-sm);
+  height: 44px;
+  min-height: 44px;
+  flex: 0 0 auto;
+  border-radius: var(--radius-sm);
+}
+
+/* Burger : visible uniquement sur mobile */
+.burger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+  position: relative;
+  z-index: 5;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+.burger-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+.top,
+.center,
+.bottom {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  transition: 0.4s ease-out;
+}
+.bottom {
+  bottom: 14px;
+}
+.top {
+  top: 14px;
+}
+.rotate-right {
+  top: calc(47%);
+  transform: rotate(45deg);
+  transition: 0.4s ease-out;
+}
+.rotate-left {
+  bottom: calc(46%);
+  transform: rotate(-45deg);
+  transition: 0.4s ease-out;
+}
+.disable {
+  display: none;
+}
+
+/* Overlay menu mobile */
 .router-link-nav {
   display: flex;
   justify-content: space-around;
   width: 300px;
   height: 40vh;
   flex-direction: column;
-  gap: 20px;
-  border-bottom-left-radius: 20px;
+  gap: var(--space-md);
+  border-bottom-left-radius: var(--radius-lg);
   position: fixed;
   top: -100vh;
   right: 0;
-  transition: all 2s ease-out;
-  background-color: #050505;
+  transition: top 0.45s ease-out;
+  background-color: var(--color-header);
+}
+
+.router-link-nav.visible {
+  top: 50px;
 }
 
 .router-button {
@@ -75,33 +192,45 @@ body {
   align-items: center;
   flex: 1;
   border: none;
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
   text-decoration: none;
   font-weight: 500;
   min-width: 200px;
-
+  min-height: 44px;
   z-index: 0;
 }
+.router-button:hover {
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background-color: var(--color-link-hover);
+  color: black;
+  transition: 0.3s;
+}
+.router-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+.router-button-active {
+  color: var(--color-accent);
+}
 
+/* Dernier bouton du menu mobile (overlay) : arrondi pour suivre le coin du panneau */
+.router-link-nav .router-button:last-child {
+  border-bottom-left-radius: var(--radius-lg);
+}
+
+/* Typographie globale */
 h2 {
   font-weight: bold;
-  font-size: 40px;
-  padding-top: 20px;
-  color: rgb(0, 0, 0);
+  font-size: var(--text-3xl);
+  padding-top: var(--space-md);
+  color: var(--color-text);
 }
 
 h3 {
-  font-size: 30px;
-  color: rgb(0, 0, 0);
+  font-size: var(--text-2xl);
+  color: var(--color-text);
   font-weight: bold;
-}
-
-.router-button:hover {
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: rgb(158, 158, 158);
-  color: black;
-  transition: all 0.5s ease-out;
 }
 
 .presentation-box {
@@ -112,117 +241,80 @@ h3 {
 .weight {
   font-weight: bold;
 }
-.burger-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  min-width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  position: relative;
-  z-index: 5;
+
+/* Desktop : logo + titre prennent le reste, nav buttons flex: 5 */
+@media (min-width: 801px) {
+  .router-nav {
+    justify-content: flex-start;
+    padding: 0 var(--space-lg);
+    gap: var(--space-xl);
+  }
+  .nav-title {
+    flex: 1;
+  }
+  .nav-links-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    flex: 5;
+  }
+  .nav-links-inline .router-button {
+    flex: 1;
+    padding: 0 var(--space-sm);
+    font-size: 15px;
+  }
+  .nav-links-inline .router-button:last-child {
+    border-radius: var(--radius-sm);
+  }
+  .burger-button {
+    display: none;
+  }
+  .router-link-nav {
+    display: none;
+  }
 }
 
-.top,
-.center,
-.bottom {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  position: absolute;
-  transition: 0.5s;
-}
-.bottom {
-  bottom: 14px;
-}
-.top {
-  top: 14px;
-}
-
-.rotate-right {
-  top: calc(47%);
-  transform: rotate(45deg);
-  transition: 0.5s;
-}
-
-.rotate-left {
-  bottom: calc(46%);
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.disable {
-  display: none;
-  transition: 0.5s;
-}
-
-.burger-button:hover {
-  cursor: pointer;
-}
-
-.visible {
-  transition: all 1s ease-out;
-  top: 50px;
-}
-
-.router-button:last-child {
-  border-bottom-left-radius: 20px;
-}
-
+/* Mobile */
 @media (max-width: 800px) {
   .container {
     padding-top: 50px;
   }
   .router-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
+    justify-content: flex-end;
   }
-
-  .rotate-right {
-    top: calc(47%);
-    transform: rotate(45deg);
-    transition: 0.5s;
-  }
-
-  .rotate-left {
-    bottom: calc(46%);
-    transform: rotate(-45deg);
-    transition: 0.5s;
-  }
-
-  .disable {
+  .nav-links-inline {
     display: none;
-    transition: 0.5s;
   }
-
-  .burger-button:hover {
-    cursor: pointer;
+  .burger-button {
+    display: flex;
   }
   .router-link-nav {
+    display: flex;
     width: 100%;
     height: 50vh;
-    display: flex;
     flex-direction: column;
-    gap: 20px;
-    background-color: rgb(0, 0, 0);
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-
-    position: fixed;
+    gap: var(--space-md);
+    background-color: var(--color-black);
+    border-bottom-right-radius: var(--radius-lg);
+    border-bottom-left-radius: var(--radius-lg);
     top: -100vh;
-    transition: all 1s ease-out;
   }
-
-  .visible {
-    transition: all 1s ease-out;
+  .router-link-nav.visible {
     top: 50px;
   }
-
   .router-button:last-child {
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: var(--radius-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .router-link-nav,
+  .top,
+  .center,
+  .bottom,
+  .rotate-right,
+  .rotate-left {
+    transition: none;
   }
 }

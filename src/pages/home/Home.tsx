@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useVisibleOnMount } from "../../hooks/useVisibleOnMount";
 import logoCS from "../../assets/img/photoCS.png";
 import "./Home.css";
 import type { LangageItem } from "../../lib/data/data";
@@ -8,16 +8,7 @@ interface HomeProps {
 }
 
 const Home = ({ langageTab }: HomeProps) => {
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const transition = async () => {
-      setTimeout(() => {
-        setIsVisible(true);
-      }, 500);
-    };
-
-    transition();
-  });
+  const isVisible = useVisibleOnMount(500);
 
   return (
     <div
@@ -26,7 +17,7 @@ const Home = ({ langageTab }: HomeProps) => {
       }>
       <section className="presentation-box">
         <div className="picture-box">
-          <img src={logoCS} alt="photo de profil" />
+          <img src={logoCS} alt="Photo de profil Timothée Béraudy-Nicolet" />
         </div>
         <div className="description-box">
           <p>
@@ -50,23 +41,23 @@ const Home = ({ langageTab }: HomeProps) => {
             d'apprendre de nouveaux langages et de progresser dans ceux que je
             maitrise déjà. <br />
             Travaillant actuellement pour l'entreprise <a href="https://www.fdti.eu/" className="weight link">FDTI Consulting</a>, je me passionne pour le code qui ouvre un champ des possibles
-            pour moi, mais peut-être aussi pour vous? <br />
+            pour moi, et ne cèsse d'apprendre de nouvelles technologies. <br />
           </p>
-           <p>Je recherche actuellement une alternance (orientée Développeur IA) à partir d'Avril 2024.</p> 
+           <p>Je recherche actuellement une alternance (orientée Développeur IA) à partir d'Avril 2026 et/ou des projets freelances.</p> 
         </div>
       </section>
       <section className="languages-techno-box">
         <h2>Languages et technologies </h2>
         <div className="languages-box">
-          {langageTab.map((langageElement, index) => {
+          {langageTab.map((langageElement) => {
             const className = langageElement.changedclass
               ? ` ${langageElement.changedclass}`
               : "language-logo-box ";
 
             return (
-              <div key={index} className="language-box">
+              <div key={langageElement.name} className="language-box">
                 <div className={className}>
-                  <img src={langageElement.logo} alt="" />
+                  <img src={langageElement.logo} alt={`Logo ${langageElement.name}`} />
                 </div>
                 <h3>{langageElement.name}</h3>
               </div>
