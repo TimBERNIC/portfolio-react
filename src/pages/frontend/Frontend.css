@@ -1,14 +1,15 @@
 .frontend {
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
   flex-direction: column;
   margin-top: 70px;
-  background-color: rgb(240, 239, 239);
+  background-color: var(--color-gray-bg-light);
   margin-bottom: 140px;
   opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
-.visible {
+.frontend.visible {
   opacity: 1;
 }
 .frontend > h2 {
@@ -16,24 +17,66 @@
   text-align: center;
   margin: 0 0 30px;
 }
-
 .frontend > p {
   text-align: center;
   font-style: italic;
   font-size: 12px;
   margin: 0 0 30px;
 }
-.frontend-project-box {
+.project-filters {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 0;
+  margin-bottom: 24px;
 }
-
-/* S'assurer que tous les projets ont la même largeur */
-.frontend-project-box .global-project-box {
+.filter-btn {
+  min-height: 44px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid var(--color-gray-border);
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+}
+.filter-btn:hover {
+  background: var(--color-gray-hover);
+}
+.filter-btn:focus-visible {
+  outline: 2px solid var(--color-accent, #0073C8);
+  outline-offset: 2px;
+}
+.filter-btn-active {
+  color: var(--color-accent, #0073C8);
+  border-color: var(--color-header, #050505);
+  background: var(--color-surface);
+}
+.frontend-project-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  justify-items: center;
   width: 100%;
-  max-width: 100%;
+}
+.voir-plus-wrap {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.voir-plus-btn {
+  min-height: 44px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 2px solid var(--color-gray-border);
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+.voir-plus-btn:hover {
+  background: var(--color-gray-hover);
+}
+.voir-plus-btn:focus-visible {
+  outline: 2px solid var(--color-accent, #0073C8);
+  outline-offset: 2px;
 }

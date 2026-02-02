@@ -76,7 +76,7 @@ export const projectsTab: ProjectItem[] = [
   {
     type: "frontend",
     title: "Token Generator App",
-    techno: "Font-end : Javascript pur, HTML, CSS",
+    techno: "Front-end : Javascript pur, HTML, CSS",
     subtitle:
       "Application de génération de tokens pour jeu de rôle ou de plateau à partir d'image avec options de personnalisation",
     img: tokenGeneratorApp,
@@ -90,7 +90,7 @@ export const projectsTab: ProjectItem[] = [
     type: "frontend",
     title: "Rick & Morty App",
     techno:
-      "Font-end : SvelteKit5, TypeScript, TailwindCSS, graphQL pour la requête vers l'API OpenSource https://rickandmortyapi.com/",
+      "Front-end : SvelteKit5, TypeScript, TailwindCSS, graphQL pour la requête vers l'API OpenSource https://rickandmortyapi.com/",
     subtitle:
       "Application de tri et recherche de personnages de la série Rick & Morty",
     img: rickMortyApp,
@@ -104,7 +104,7 @@ export const projectsTab: ProjectItem[] = [
     type: "frontend",
     title: "Weather App",
     techno:
-      "Font-end : SvelteKit5, TypeScript, TailwindCSS, test : Vitest, axios pour la requête vers l'API OpenSource wttr.in",
+      "Front-end : SvelteKit5, TypeScript, TailwindCSS, test : Vitest, axios pour la requête vers l'API OpenSource wttr.in",
     subtitle:
       "Application de météo avec recherche par ville et affichage de la météo",
     img: weatherApp,
@@ -118,7 +118,7 @@ export const projectsTab: ProjectItem[] = [
     type: "fullstack",
     title: "Web-App/Site Fix Nicolet",
     techno:
-      "Font-end : ReactJS, TypeScript, TailwindCSS, Back-end: API en Express, usage de Cors, helmet, multer... et base de données en mongoDB",
+      "Front-end : ReactJS, TypeScript, TailwindCSS, Back-end: API en Express, usage de Cors, helmet, multer... et base de données en mongoDB",
     subtitle:
       "Création d'un complexe fullstack de sites professionnel de référencement des services du guitariste concertiste Fix Nicolet, avec notamment d'un second front-end Adminitrateur pour permettre la gestion utilisateur du site",
     img: fixnicolet,
@@ -194,7 +194,7 @@ export const projectsTab: ProjectItem[] = [
   },
   {
     type: "frontend",
-    techno: "React",
+    techno: "React/TypeScript",
     title: "Ce Portfolio",
     subtitle: "Entièrement codé en reactJS !",
     features:

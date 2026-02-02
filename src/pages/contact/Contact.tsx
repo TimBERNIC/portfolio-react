@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useVisibleOnMount } from "../../hooks/useVisibleOnMount";
 import emailLogo from "../../assets/img/mail.jpg";
 import githubLogo from "../../assets/img/github.png";
 import linkedinLogo from "../../assets/img/linkedin.png";
@@ -8,17 +8,7 @@ import { SiReaddotcv } from "react-icons/si";
 import "./Contact.css";
 
 const Contact = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const transition = async () => {
-      setTimeout(() => {
-        setIsVisible(true);
-      }, 500);
-    };
-
-    transition();
-  });
+  const isVisible = useVisibleOnMount(500);
 
   return (
     <div
@@ -33,25 +23,31 @@ const Contact = () => {
       </p>
       <div className="contact-box">
         <div className="contact-logo-global-box">
-          <a href="mailto:nicolet.t@hotmail.fr" className="contact-logo-box">
-            <img src={emailLogo} alt="logo-mail" />
+          <a href="mailto:nicolet.t@hotmail.fr" className="contact-logo-box" aria-label="Envoyer un email">
+            <img src={emailLogo} alt="Icône email" />
           </a>
-          <a href="https://github.com/TimBERNIC" className="contact-logo-box">
-            <img src={githubLogo} alt="logo-github" />
+          <a href="https://github.com/TimBERNIC" className="contact-logo-box" aria-label="Profil GitHub">
+            <img src={githubLogo} alt="Logo GitHub" />
           </a>
           <a
             href="https://www.linkedin.com/in/timothée-nicolet-8b04a8329"
-            className="contact-logo-box">
-            <img src={linkedinLogo} alt="logo-linkedin" />
+            className="contact-logo-box"
+            aria-label="Profil LinkedIn">
+            <img src={linkedinLogo} alt="Logo LinkedIn" />
           </a>
         </div>
         <div className="cv-box">
           <div className="cv-logo-box">
             <SiReaddotcv />
           </div>
-          :<a href={CV}>Accédez à mon CV</a>
-          <a href={CV} download="CV">
-            <FaDownload />
+          <span className="cv-label">Mon CV</span>
+          <a
+            href={CV}
+            download="CV_Timothee_BERAUDY-NICOLET.pdf"
+            className="cv-download-btn"
+            aria-label="Télécharger le CV (PDF)">
+            <FaDownload aria-hidden="true" />
+            <span>Télécharger le CV</span>
           </a>
         </div>
       </div>

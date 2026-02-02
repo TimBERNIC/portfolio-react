@@ -1,7 +1,7 @@
 footer {
-  background-color: #050505;
-  box-shadow: 4px 18px 50px -10px #050505;
-  color: rgb(255, 255, 255);
+  background-color: var(--color-header, #050505);
+  box-shadow: 4px 18px 50px -10px var(--color-header, #050505);
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +42,12 @@ footer > div {
   align-items: center;
   gap: 5px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
+}
+.link-box a:focus-visible,
+.footer-caracters:focus-visible {
+  outline: 2px solid var(--color-accent, #0073C8);
+  outline-offset: 2px;
 }
 .link-logo-box img {
   border-radius: 100%;
@@ -53,7 +58,7 @@ footer > div {
 .footer-caracters {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
   margin: 0px 3px;
 }
 
