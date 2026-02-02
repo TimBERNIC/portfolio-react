@@ -1,6 +1,10 @@
-import React from "react";
+import type { LinkItem } from "../../lib/data/data";
 
-const Link = ({ linkElement }) => {
+interface LinkToSiteProps {
+  linkElement: LinkItem;
+}
+
+const LinkToSite = ({ linkElement }: LinkToSiteProps) => {
   return (
     <div className="link-box2">
       <a href={linkElement.url}>
@@ -13,4 +17,4 @@ const Link = ({ linkElement }) => {
   );
 };
 
-export default Link;
+export default LinkToSite;

@@ -1,7 +1,12 @@
 import "./Project.css";
-import { useState } from "react";
+import type { ProjectItem } from "../../lib/data/data";
 
-const Project = ({ project }) => {
+interface ProjectProps {
+  project: ProjectItem;
+  projectsTab?: ProjectItem[];
+}
+
+const Project = ({ project }: ProjectProps) => {
   return (
     <>
       <div className="global-project-box">

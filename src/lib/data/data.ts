@@ -1,118 +1,82 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useState, lazy, Suspense } from "react";
-import "./App.css";
-
 // Imports des images
-import htmlLogo from "./assets/img/html.png";
-import deliverooImg from "./assets/img/deliveroo.webp";
-import TedVin from "./assets/img/tedvin.webp";
-import fletnixImg from "./assets/img/fletnix.webp";
-import githubLogo from "./assets/img/github.png";
-import linkedinLogo from "./assets/img/linkedin.png";
-import tripadvisor from "./assets/img/tripadvisor.png";
-import EmojiS from "./assets/img/emojiS.webp";
-import CSSlogo from "./assets/img/css.webp";
-import JSlogo from "./assets/img/javascript.png";
-import reactlogo from "./assets/img/react.png";
-import reactNativeLogo from "./assets/img/react-native-1.svg";
-import nodeJs from "./assets/img/nodeJS.png";
-import express from "./assets/img/Expressjs.png";
-import mongoDB from "./assets/img/MongoDB.png";
-import favicon from "./assets/img/favicon.webp";
-import marvel from "./assets/img/marvel.webp";
-import portFolio from "./assets/img/page-portfolio.png";
-import BnBair from "./assets/img/BnbAir.webm";
-import TORPG from "./assets/img/TO-RPG.png";
-import fixnicolet from "./assets/img/fixnicolet.webp";
-import typescriptLogo from "./assets/img/typescript.png";
-import tailwindLogo from "./assets/img/tailwind.svg";
-import weatherApp from "./assets/img/weather-app.png";
-import sassLogo from "./assets/img/sass.png";
-import svelteLogo from "./assets/img/svelte.png";
-import vitestLogo from "./assets/img/vitest.png";
-import jestLogo from "./assets/img/jest.png";
-import rickMortyApp from "./assets/img/rick-morty.jpg";
-import tokenGeneratorApp from "./assets/img/token-generator.jpg";
+import htmlLogo from "../../assets/img/html.png";
+import deliverooImg from "../../assets/img/deliveroo.webp";
+import TedVin from "../../assets/img/tedvin.webp";
+import fletnixImg from "../../assets/img/fletnix.webp";
+import githubLogo from "../../assets/img/github.png";
+import linkedinLogo from "../../assets/img/linkedin.png";
+import tripadvisor from "../../assets/img/tripadvisor.png";
+import EmojiS from "../../assets/img/emojiS.webp";
+import CSSlogo from "../../assets/img/css.webp";
+import JSlogo from "../../assets/img/javascript.png";
+import reactlogo from "../../assets/img/react.png";
+import reactNativeLogo from "../../assets/img/react-native-1.svg";
+import nodeJs from "../../assets/img/nodeJS.png";
+import express from "../../assets/img/Expressjs.png";
+import mongoDB from "../../assets/img/MongoDB.png";
+import marvel from "../../assets/img/marvel.webp";
+import portFolio from "../../assets/img/page-portfolio.png";
+import BnBair from "../../assets/img/BnbAir.webm";
+import TORPG from "../../assets/img/TO-RPG.png";
+import fixnicolet from "../../assets/img/fixnicolet.webp";
+import typescriptLogo from "../../assets/img/typescript.png";
+import tailwindLogo from "../../assets/img/tailwind.svg";
+import weatherApp from "../../assets/img/weather-app.png";
+import sassLogo from "../../assets/img/sass.png";
+import svelteLogo from "../../assets/img/svelte.png";
+import vitestLogo from "../../assets/img/vitest.png";
+import jestLogo from "../../assets/img/jest.png";
+import rickMortyApp from "../../assets/img/rick-morty.jpg";
+import tokenGeneratorApp from "../../assets/img/token-generator.jpg";
 
-// Imports des composants
-import LoadingSpinner from "./components/LoadingSpinner";
-import "./components/Footer/Footer.css";
+// Types pour les données du portfolio
+export interface LangageItem {
+  name: string;
+  logo: string;
+  changedclass?: string;
+}
 
-// Lazy loading des composants
-const Footer = lazy(() => import("./components/Footer/Footer"));
+export interface ProjectItem {
+  type: "frontend" | "fullstack";
+  title: string;
+  techno?: string;
+  subtitle?: string;
+  features?: string;
+  img: string;
+  url?: string;
+  githubFront?: string;
+  githubBack?: string;
+  description?: string;
+}
 
-// Lazy loading des pages
-const Welcome = lazy(() => import("./pages/Welcome/Welcome.jsx"));
-const Home = lazy(() => import("./pages/home/Home"));
-const Fullstack = lazy(() => import("./pages/fullstack/Fullstack"));
-const Frontend = lazy(() => import("./pages/frontend/Frontend"));
-const Contact = lazy(() => import("./pages/contact/Contact"));
+export interface LinkItem {
+  name: string;
+  logo: string;
+  url: string;
+}
 
-const langageTab = [
-  {
-    name: "ReactJS",
-    logo: reactlogo,
-  },
-  {
-    name: "ReactNative",
-    logo: reactNativeLogo,
-  },
-  {
-    name: "SvelteKit5",
-    logo: svelteLogo,
-  },
-  {
-    name: "JavaScript",
-    logo: JSlogo,
-  },
-  {
-    name: "TypeScript",
-    logo: typescriptLogo,
-  },
-  {
-    name: "CSS",
-    logo: CSSlogo,
-  },
-  {
-    name: "SCSS",
-    logo: sassLogo,
-  },
-  {
-    name: "TailwindCSS",
-    logo: tailwindLogo,
-  },
-  {
-    name: "HTML5",
-    logo: htmlLogo,
-  },
-  {
-    name: "NodeJS",
-    logo: nodeJs,
-  },
-  {
-    name: "ExpressJS",
-    logo: express,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDB,
-  },
-  {
-    name: "Vitest",
-    logo: vitestLogo,
-  },
-  {
-    name: "Jest",
-    logo: jestLogo,
-  },
+export const langageTab: LangageItem[] = [
+  { name: "ReactJS", logo: reactlogo },
+  { name: "ReactNative", logo: reactNativeLogo },
+  { name: "SvelteKit5", logo: svelteLogo },
+  { name: "JavaScript", logo: JSlogo },
+  { name: "TypeScript", logo: typescriptLogo },
+  { name: "CSS", logo: CSSlogo },
+  { name: "SCSS", logo: sassLogo },
+  { name: "TailwindCSS", logo: tailwindLogo },
+  { name: "HTML5", logo: htmlLogo },
+  { name: "NodeJS", logo: nodeJs },
+  { name: "ExpressJS", logo: express },
+  { name: "MongoDB", logo: mongoDB },
+  { name: "Vitest", logo: vitestLogo },
+  { name: "Jest", logo: jestLogo },
 ];
 
-const projectsTab = [
-   {
+export const projectsTab: ProjectItem[] = [
+  {
     type: "frontend",
     title: "Token Generator App",
-    techno:
-      "Font-end : Javascript pur, HTML, CSS",
+    techno: "Font-end : Javascript pur, HTML, CSS",
     subtitle:
       "Application de génération de tokens pour jeu de rôle ou de plateau à partir d'image avec options de personnalisation",
     img: tokenGeneratorApp,
@@ -203,7 +167,6 @@ const projectsTab = [
     githubFront: "https://github.com/TimBERNIC/marvel-frontend",
     githubBack: "https://github.com/TimBERNIC/marvel-backend",
   },
-
   {
     type: "fullstack",
     title: "TedVin",
@@ -213,7 +176,6 @@ const projectsTab = [
     img: TedVin,
     features:
       "Gestion d'une modale Login et Signup avec requêtes et post vers l'API et la Base de données MongoDB. Gestion du retour de token en cookie. Gestion d'un système de paiement en ligne avec 'Stripe'. Côté backend, gestion du stockage des données utilisateur, gestion de la logique d'authentification et de sécurisation des données.",
-
     url: "https://tedvin-frontend-bytbn.netlify.app/",
     githubFront: "https://github.com/TimBERNIC/TedVin-frontend",
     githubBack: "https://github.com/TimBERNIC/tedvin-backend",
@@ -243,7 +205,6 @@ const projectsTab = [
     githubFront: "https://github.com/TimBERNIC/portfolio-react",
     githubBack: "",
   },
-
   {
     type: "frontend",
     techno: "React",
@@ -284,7 +245,7 @@ const projectsTab = [
   },
 ];
 
-const linkTab = [
+export const linkTab: LinkItem[] = [
   {
     name: "Github",
     logo: githubLogo,
@@ -296,105 +257,3 @@ const linkTab = [
     url: "https://www.linkedin.com/in/timothée-nicolet-8b04a8329",
   },
 ];
-
-const App = () => {
-  const [burgerVisible, setBurgerVisible] = useState(false);
-
-  return (
-    <>
-      <main>
-        <Router>
-          <header className="router-nav">
-            <Link to="/home" className="nav-title">
-              <div>
-                <img src={favicon} alt="" />
-              </div>
-              <p>Portfolio</p>
-            </Link>
-            <div
-              className={"burger-button"}
-              onClick={() => {
-                setBurgerVisible(!burgerVisible);
-              }}>
-              <div className={burgerVisible ? "top rotate-right" : "top"}></div>
-              <div
-                className={burgerVisible ? "center disable" : "center"}></div>
-              <div
-                className={
-                  burgerVisible ? "bottom rotate-left" : "bottom"
-                }></div>
-            </div>
-            <div
-              className={
-                burgerVisible ? "router-link-nav visible" : "router-link-nav"
-              }>
-              <Link
-                className="router-button"
-                to="/home"
-                onClick={() => {
-                  setBurgerVisible(false);
-                }}>
-                Accueil
-              </Link>
-              <Link
-                className="router-button"
-                to="/fullstack"
-                onClick={() => {
-                  setBurgerVisible(false);
-                }}>
-                Projets Fullstack
-              </Link>
-              <Link
-                className="router-button"
-                to="/frontend"
-                onClick={() => {
-                  setBurgerVisible(false);
-                }}>
-                Projets Frontend
-              </Link>
-              <Link
-                className="router-button"
-                to="/contact"
-                onClick={() => {
-                  setBurgerVisible(false);
-                }}>
-                Contact
-              </Link>
-            </div>
-          </header>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Welcome />}></Route>
-              <Route
-                path="/home"
-                element={<Home langageTab={langageTab} />}></Route>
-              <Route
-                path="/fullstack"
-                element={<Fullstack projectsTab={projectsTab} />}></Route>
-              <Route
-                path="/frontend"
-                element={<Frontend projectsTab={projectsTab} />}></Route>
-              <Route path="/contact" element={<Contact />}></Route>
-            </Routes>
-          </Suspense>
-        </Router>
-      </main>
-      <Suspense
-        fallback={
-          <div
-            style={{
-              height: "100px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}>
-            Chargement du footer...
-          </div>
-        }>
-        <Footer linkTab={linkTab} />
-      </Suspense>
-    </>
-  );
-};
-
-export default App;

@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import emailLogo from "../../assets/img/mail.jpg";
 import githubLogo from "../../assets/img/github.png";

@@ -1,7 +1,13 @@
-import Project from "../../components/project/Project";
+import Project from "../../components/project/Project.tsx";
 import { useState, useEffect } from "react";
 import "./Frontend.css";
-const Frontend = ({ projectsTab }) => {
+import type { ProjectItem } from "../../lib/data/data";
+
+interface FrontendProps {
+  projectsTab: ProjectItem[];
+}
+
+const Frontend = ({ projectsTab }: FrontendProps) => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const transition = async () => {
