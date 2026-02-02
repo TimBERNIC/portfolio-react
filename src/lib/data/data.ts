@@ -28,7 +28,8 @@ import vitestLogo from "../../assets/img/vitest.png";
 import jestLogo from "../../assets/img/jest.png";
 import rickMortyApp from "../../assets/img/rick-morty.jpg";
 import tokenGeneratorApp from "../../assets/img/token-generator.jpg";
-
+import pythonLogo from "../../assets/img/fastapi.svg";
+import postgresqlLogo from "../../assets/img/Postgresql.png";
 // Types pour les données du portfolio
 export interface LangageItem {
   name: string;
@@ -70,6 +71,8 @@ export const langageTab: LangageItem[] = [
   { name: "MongoDB", logo: mongoDB },
   { name: "Vitest", logo: vitestLogo },
   { name: "Jest", logo: jestLogo },
+  { name: "Python (FastAPI)", logo: pythonLogo },
+  { name: "PostgreSQL", logo: postgresqlLogo },
 ];
 
 export const projectsTab: ProjectItem[] = [
