@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
-import Project from "../../components/project/Project";
+import Project from "../../components/project/Project.tsx";
 import "./Fullstack.css";
-const Fullstack = ({ projectsTab }) => {
+import type { ProjectItem } from "../../lib/data/data";
+
+interface FullstackProps {
+  projectsTab: ProjectItem[];
+}
+
+const Fullstack = ({ projectsTab }: FullstackProps) => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const transition = async () => {

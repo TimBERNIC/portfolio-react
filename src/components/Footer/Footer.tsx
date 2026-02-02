@@ -1,6 +1,11 @@
 import LinkToSite from "./LinkToSite";
+import type { LinkItem } from "../../lib/data/data";
 
-const Footer = ({ linkTab }) => {
+interface FooterProps {
+  linkTab: LinkItem[];
+}
+
+const Footer = ({ linkTab }: FooterProps) => {
   return (
     <footer>
       <div className="link-box">

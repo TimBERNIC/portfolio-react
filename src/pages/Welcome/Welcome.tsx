@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import "../Welcome/Welcome.css";
-
+import { useState } from "react";
+import "./Welcome.css";
 import { Link, useNavigate } from "react-router-dom";
+
 const Welcome = () => {
   const [color, setColor] = useState("white");
   const navigate = useNavigate();

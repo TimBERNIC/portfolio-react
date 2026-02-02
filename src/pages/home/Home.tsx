@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import logoCS from "../../assets/img/photoCS.png";
 import "./Home.css";
+import type { LangageItem } from "../../lib/data/data";
 
-const Home = ({ langageTab }) => {
+interface HomeProps {
+  langageTab: LangageItem[];
+}
+
+const Home = ({ langageTab }: HomeProps) => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const transition = async () => {
